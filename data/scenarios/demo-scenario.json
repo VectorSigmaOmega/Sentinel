@@ -1,0 +1,5083 @@
+{
+  "scenario": {
+    "id": "s42",
+    "seed": "42",
+    "name": "Sentinel Demo Network",
+    "scenarioStart": 1714219200000,
+    "createdAt": 1714219200000,
+    "version": 0,
+    "generatorConfigHash": "9590b517a93771a8e5389a757b346cb87ff05a2f933e7e51bce0afdb8f9178be"
+  },
+  "locations": [
+    {
+      "id": "s42:loc-supplier-001",
+      "scenarioId": "s42",
+      "kind": "supplier",
+      "name": "Supplier 1",
+      "x": 1.544,
+      "y": 80.827,
+      "handlingTimeHours": 3.06,
+      "capacityUnitsPerHour": 560.18,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-supplier-002",
+      "scenarioId": "s42",
+      "kind": "supplier",
+      "name": "Supplier 2",
+      "x": 4.938,
+      "y": 17.368,
+      "handlingTimeHours": 3.03,
+      "capacityUnitsPerHour": 449.13,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-supplier-003",
+      "scenarioId": "s42",
+      "kind": "supplier",
+      "name": "Supplier 3",
+      "x": 2.938,
+      "y": 18.661,
+      "handlingTimeHours": 3.89,
+      "capacityUnitsPerHour": 510.16,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-supplier-004",
+      "scenarioId": "s42",
+      "kind": "supplier",
+      "name": "Supplier 4",
+      "x": 0.082,
+      "y": 20.343,
+      "handlingTimeHours": 1.32,
+      "capacityUnitsPerHour": 226.84,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-factory-001",
+      "scenarioId": "s42",
+      "kind": "factory",
+      "name": "Factory 1",
+      "x": 23.239,
+      "y": 82.487,
+      "handlingTimeHours": 5.38,
+      "capacityUnitsPerHour": 344.02,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-factory-002",
+      "scenarioId": "s42",
+      "kind": "factory",
+      "name": "Factory 2",
+      "x": 25.879,
+      "y": 28.383,
+      "handlingTimeHours": 3.5,
+      "capacityUnitsPerHour": 499.97,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-factory-003",
+      "scenarioId": "s42",
+      "kind": "factory",
+      "name": "Factory 3",
+      "x": 21.342,
+      "y": 67.181,
+      "handlingTimeHours": 3.71,
+      "capacityUnitsPerHour": 299.49,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-hub-001",
+      "scenarioId": "s42",
+      "kind": "hub",
+      "name": "Hub 1",
+      "x": 48.086,
+      "y": 52.987,
+      "handlingTimeHours": 3.37,
+      "capacityUnitsPerHour": 378.54,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-hub-002",
+      "scenarioId": "s42",
+      "kind": "hub",
+      "name": "Hub 2",
+      "x": 52.298,
+      "y": 18.127,
+      "handlingTimeHours": 2.89,
+      "capacityUnitsPerHour": 345.7,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-hub-003",
+      "scenarioId": "s42",
+      "kind": "hub",
+      "name": "Hub 3",
+      "x": 49.347,
+      "y": 47.745,
+      "handlingTimeHours": 2.19,
+      "capacityUnitsPerHour": 159.93,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-hub-004",
+      "scenarioId": "s42",
+      "kind": "hub",
+      "name": "Hub 4",
+      "x": 48.978,
+      "y": 68.915,
+      "handlingTimeHours": 4.11,
+      "capacityUnitsPerHour": 380.78,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-hub-005",
+      "scenarioId": "s42",
+      "kind": "hub",
+      "name": "Hub 5",
+      "x": 51.218,
+      "y": 23.077,
+      "handlingTimeHours": 2.05,
+      "capacityUnitsPerHour": 370.6,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-warehouse-001",
+      "scenarioId": "s42",
+      "kind": "warehouse",
+      "name": "Warehouse 1",
+      "x": 72.545,
+      "y": 60.456,
+      "handlingTimeHours": 3.8,
+      "capacityUnitsPerHour": 454.72,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-warehouse-002",
+      "scenarioId": "s42",
+      "kind": "warehouse",
+      "name": "Warehouse 2",
+      "x": 78.956,
+      "y": 42.543,
+      "handlingTimeHours": 3.13,
+      "capacityUnitsPerHour": 234.27,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-warehouse-003",
+      "scenarioId": "s42",
+      "kind": "warehouse",
+      "name": "Warehouse 3",
+      "x": 75.25,
+      "y": 45.701,
+      "handlingTimeHours": 2.43,
+      "capacityUnitsPerHour": 312.55,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-warehouse-004",
+      "scenarioId": "s42",
+      "kind": "warehouse",
+      "name": "Warehouse 4",
+      "x": 73.453,
+      "y": 13.913,
+      "handlingTimeHours": 2.48,
+      "capacityUnitsPerHour": 485.36,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-destination-001",
+      "scenarioId": "s42",
+      "kind": "destination",
+      "name": "Destination 1",
+      "x": 95.493,
+      "y": 3.795,
+      "handlingTimeHours": 0.99,
+      "capacityUnitsPerHour": 112.26,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-destination-002",
+      "scenarioId": "s42",
+      "kind": "destination",
+      "name": "Destination 2",
+      "x": 95.51,
+      "y": 9.457,
+      "handlingTimeHours": 1.05,
+      "capacityUnitsPerHour": 102.69,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-destination-003",
+      "scenarioId": "s42",
+      "kind": "destination",
+      "name": "Destination 3",
+      "x": 93.064,
+      "y": 8.293,
+      "handlingTimeHours": 1.46,
+      "capacityUnitsPerHour": 340.17,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-destination-004",
+      "scenarioId": "s42",
+      "kind": "destination",
+      "name": "Destination 4",
+      "x": 92.432,
+      "y": 9.266,
+      "handlingTimeHours": 0.68,
+      "capacityUnitsPerHour": 307.54,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-destination-005",
+      "scenarioId": "s42",
+      "kind": "destination",
+      "name": "Destination 5",
+      "x": 93.479,
+      "y": 73.445,
+      "handlingTimeHours": 1.41,
+      "capacityUnitsPerHour": 347.95,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-destination-006",
+      "scenarioId": "s42",
+      "kind": "destination",
+      "name": "Destination 6",
+      "x": 98.181,
+      "y": 7.045,
+      "handlingTimeHours": 0.9,
+      "capacityUnitsPerHour": 158.67,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-destination-007",
+      "scenarioId": "s42",
+      "kind": "destination",
+      "name": "Destination 7",
+      "x": 93.759,
+      "y": 97.239,
+      "handlingTimeHours": 1.83,
+      "capacityUnitsPerHour": 208.88,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-destination-008",
+      "scenarioId": "s42",
+      "kind": "destination",
+      "name": "Destination 8",
+      "x": 94.176,
+      "y": 42.559,
+      "handlingTimeHours": 1.04,
+      "capacityUnitsPerHour": 300.37,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-destination-009",
+      "scenarioId": "s42",
+      "kind": "destination",
+      "name": "Destination 9",
+      "x": 97.803,
+      "y": 24.739,
+      "handlingTimeHours": 1.62,
+      "capacityUnitsPerHour": 229.77,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-destination-010",
+      "scenarioId": "s42",
+      "kind": "destination",
+      "name": "Destination 10",
+      "x": 93.75,
+      "y": 41.322,
+      "handlingTimeHours": 1.45,
+      "capacityUnitsPerHour": 348,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-destination-011",
+      "scenarioId": "s42",
+      "kind": "destination",
+      "name": "Destination 11",
+      "x": 93.166,
+      "y": 67.043,
+      "handlingTimeHours": 0.6,
+      "capacityUnitsPerHour": 327.23,
+      "status": "open",
+      "tags": []
+    },
+    {
+      "id": "s42:loc-destination-012",
+      "scenarioId": "s42",
+      "kind": "destination",
+      "name": "Destination 12",
+      "x": 97.341,
+      "y": 72.226,
+      "handlingTimeHours": 1.95,
+      "capacityUnitsPerHour": 203.2,
+      "status": "open",
+      "tags": []
+    }
+  ],
+  "lanes": [
+    {
+      "id": "s42:lane-001",
+      "scenarioId": "s42",
+      "originId": "s42:loc-supplier-001",
+      "destinationId": "s42:loc-factory-003",
+      "mode": "truck",
+      "transitHours": 6.33,
+      "capacityUnitsPerHour": 312.51,
+      "costPerUnit": 432.81,
+      "reliability": 0.9059,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-002",
+      "scenarioId": "s42",
+      "originId": "s42:loc-supplier-002",
+      "destinationId": "s42:loc-factory-003",
+      "mode": "truck",
+      "transitHours": 13.8,
+      "capacityUnitsPerHour": 82.24,
+      "costPerUnit": 944,
+      "reliability": 0.8893,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-003",
+      "scenarioId": "s42",
+      "originId": "s42:loc-supplier-002",
+      "destinationId": "s42:loc-factory-002",
+      "mode": "truck",
+      "transitHours": 6.23,
+      "capacityUnitsPerHour": 278.02,
+      "costPerUnit": 425.9,
+      "reliability": 0.9447,
+      "supportsColdChain": true,
+      "supportsHazmat": true,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-004",
+      "scenarioId": "s42",
+      "originId": "s42:loc-supplier-003",
+      "destinationId": "s42:loc-factory-003",
+      "mode": "truck",
+      "transitHours": 13.66,
+      "capacityUnitsPerHour": 267.77,
+      "costPerUnit": 934.08,
+      "reliability": 0.9674,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-005",
+      "scenarioId": "s42",
+      "originId": "s42:loc-supplier-004",
+      "destinationId": "s42:loc-factory-001",
+      "mode": "truck",
+      "transitHours": 17.45,
+      "capacityUnitsPerHour": 286.51,
+      "costPerUnit": 1193.73,
+      "reliability": 0.956,
+      "supportsColdChain": true,
+      "supportsHazmat": true,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-006",
+      "scenarioId": "s42",
+      "originId": "s42:loc-factory-001",
+      "destinationId": "s42:loc-hub-004",
+      "mode": "rail",
+      "transitHours": 5.29,
+      "capacityUnitsPerHour": 317.25,
+      "costPerUnit": 378.27,
+      "reliability": 0.9764,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-007",
+      "scenarioId": "s42",
+      "originId": "s42:loc-factory-001",
+      "destinationId": "s42:loc-hub-003",
+      "mode": "rail",
+      "transitHours": 7.9,
+      "capacityUnitsPerHour": 106.36,
+      "costPerUnit": 564.96,
+      "reliability": 0.8995,
+      "supportsColdChain": false,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-008",
+      "scenarioId": "s42",
+      "originId": "s42:loc-factory-002",
+      "destinationId": "s42:loc-hub-001",
+      "mode": "rail",
+      "transitHours": 6.03,
+      "capacityUnitsPerHour": 85.44,
+      "costPerUnit": 430.87,
+      "reliability": 0.8991,
+      "supportsColdChain": false,
+      "supportsHazmat": true,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-009",
+      "scenarioId": "s42",
+      "originId": "s42:loc-factory-002",
+      "destinationId": "s42:loc-hub-003",
+      "mode": "rail",
+      "transitHours": 5.53,
+      "capacityUnitsPerHour": 235.89,
+      "costPerUnit": 395.52,
+      "reliability": 0.942,
+      "supportsColdChain": true,
+      "supportsHazmat": true,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-010",
+      "scenarioId": "s42",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-hub-003",
+      "mode": "rail",
+      "transitHours": 6.2,
+      "capacityUnitsPerHour": 176.13,
+      "costPerUnit": 443.15,
+      "reliability": 0.9554,
+      "supportsColdChain": true,
+      "supportsHazmat": true,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-011",
+      "scenarioId": "s42",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-hub-005",
+      "mode": "rail",
+      "transitHours": 9.69,
+      "capacityUnitsPerHour": 139.28,
+      "costPerUnit": 692.52,
+      "reliability": 0.9095,
+      "supportsColdChain": false,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-012",
+      "scenarioId": "s42",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-hub-002",
+      "mode": "rail",
+      "transitHours": 10.55,
+      "capacityUnitsPerHour": 89.38,
+      "costPerUnit": 754.06,
+      "reliability": 0.8827,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-013",
+      "scenarioId": "s42",
+      "originId": "s42:loc-hub-001",
+      "destinationId": "s42:loc-warehouse-001",
+      "mode": "truck",
+      "transitHours": 5.33,
+      "capacityUnitsPerHour": 97.47,
+      "costPerUnit": 409.18,
+      "reliability": 0.9854,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-014",
+      "scenarioId": "s42",
+      "originId": "s42:loc-hub-001",
+      "destinationId": "s42:loc-warehouse-003",
+      "mode": "truck",
+      "transitHours": 5.86,
+      "capacityUnitsPerHour": 311.9,
+      "costPerUnit": 449.99,
+      "reliability": 0.9535,
+      "supportsColdChain": true,
+      "supportsHazmat": true,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-015",
+      "scenarioId": "s42",
+      "originId": "s42:loc-hub-001",
+      "destinationId": "s42:loc-warehouse-002",
+      "mode": "truck",
+      "transitHours": 6.79,
+      "capacityUnitsPerHour": 230.82,
+      "costPerUnit": 521.42,
+      "reliability": 0.9379,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-016",
+      "scenarioId": "s42",
+      "originId": "s42:loc-hub-002",
+      "destinationId": "s42:loc-warehouse-002",
+      "mode": "truck",
+      "transitHours": 7.53,
+      "capacityUnitsPerHour": 294.47,
+      "costPerUnit": 578.39,
+      "reliability": 0.957,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-017",
+      "scenarioId": "s42",
+      "originId": "s42:loc-hub-002",
+      "destinationId": "s42:loc-warehouse-004",
+      "mode": "truck",
+      "transitHours": 4.49,
+      "capacityUnitsPerHour": 83.13,
+      "costPerUnit": 345.13,
+      "reliability": 0.9762,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-018",
+      "scenarioId": "s42",
+      "originId": "s42:loc-hub-002",
+      "destinationId": "s42:loc-warehouse-001",
+      "mode": "truck",
+      "transitHours": 9.78,
+      "capacityUnitsPerHour": 89.29,
+      "costPerUnit": 750.75,
+      "reliability": 0.9529,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-019",
+      "scenarioId": "s42",
+      "originId": "s42:loc-hub-003",
+      "destinationId": "s42:loc-warehouse-002",
+      "mode": "truck",
+      "transitHours": 6.26,
+      "capacityUnitsPerHour": 267.63,
+      "costPerUnit": 481,
+      "reliability": 0.897,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-020",
+      "scenarioId": "s42",
+      "originId": "s42:loc-hub-003",
+      "destinationId": "s42:loc-warehouse-003",
+      "mode": "truck",
+      "transitHours": 5.41,
+      "capacityUnitsPerHour": 140.12,
+      "costPerUnit": 415.74,
+      "reliability": 0.8803,
+      "supportsColdChain": true,
+      "supportsHazmat": true,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-021",
+      "scenarioId": "s42",
+      "originId": "s42:loc-hub-004",
+      "destinationId": "s42:loc-warehouse-003",
+      "mode": "truck",
+      "transitHours": 7.3,
+      "capacityUnitsPerHour": 175.41,
+      "costPerUnit": 560.94,
+      "reliability": 0.8978,
+      "supportsColdChain": false,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-022",
+      "scenarioId": "s42",
+      "originId": "s42:loc-hub-005",
+      "destinationId": "s42:loc-warehouse-001",
+      "mode": "truck",
+      "transitHours": 8.97,
+      "capacityUnitsPerHour": 229.33,
+      "costPerUnit": 688.56,
+      "reliability": 0.9052,
+      "supportsColdChain": false,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-023",
+      "scenarioId": "s42",
+      "originId": "s42:loc-warehouse-001",
+      "destinationId": "s42:loc-destination-009",
+      "mode": "truck",
+      "transitHours": 10.42,
+      "capacityUnitsPerHour": 142.12,
+      "costPerUnit": 874.91,
+      "reliability": 0.9069,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-024",
+      "scenarioId": "s42",
+      "originId": "s42:loc-warehouse-001",
+      "destinationId": "s42:loc-destination-006",
+      "mode": "truck",
+      "transitHours": 14.11,
+      "capacityUnitsPerHour": 208.81,
+      "costPerUnit": 1184.89,
+      "reliability": 0.9151,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-025",
+      "scenarioId": "s42",
+      "originId": "s42:loc-warehouse-001",
+      "destinationId": "s42:loc-destination-005",
+      "mode": "truck",
+      "transitHours": 5.87,
+      "capacityUnitsPerHour": 166.44,
+      "costPerUnit": 492.73,
+      "reliability": 0.8867,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-026",
+      "scenarioId": "s42",
+      "originId": "s42:loc-warehouse-002",
+      "destinationId": "s42:loc-destination-004",
+      "mode": "truck",
+      "transitHours": 8.55,
+      "capacityUnitsPerHour": 169.39,
+      "costPerUnit": 718.04,
+      "reliability": 0.9113,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-027",
+      "scenarioId": "s42",
+      "originId": "s42:loc-warehouse-002",
+      "destinationId": "s42:loc-destination-002",
+      "mode": "truck",
+      "transitHours": 8.81,
+      "capacityUnitsPerHour": 188.93,
+      "costPerUnit": 739.92,
+      "reliability": 0.8974,
+      "supportsColdChain": false,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-028",
+      "scenarioId": "s42",
+      "originId": "s42:loc-warehouse-002",
+      "destinationId": "s42:loc-destination-008",
+      "mode": "truck",
+      "transitHours": 3.62,
+      "capacityUnitsPerHour": 109.95,
+      "costPerUnit": 304.4,
+      "reliability": 0.9706,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-029",
+      "scenarioId": "s42",
+      "originId": "s42:loc-warehouse-002",
+      "destinationId": "s42:loc-destination-007",
+      "mode": "truck",
+      "transitHours": 13.49,
+      "capacityUnitsPerHour": 234.42,
+      "costPerUnit": 1133.28,
+      "reliability": 0.938,
+      "supportsColdChain": true,
+      "supportsHazmat": true,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-030",
+      "scenarioId": "s42",
+      "originId": "s42:loc-warehouse-003",
+      "destinationId": "s42:loc-destination-012",
+      "mode": "truck",
+      "transitHours": 8.22,
+      "capacityUnitsPerHour": 203.01,
+      "costPerUnit": 690.39,
+      "reliability": 0.9066,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-031",
+      "scenarioId": "s42",
+      "originId": "s42:loc-warehouse-003",
+      "destinationId": "s42:loc-destination-001",
+      "mode": "truck",
+      "transitHours": 11.08,
+      "capacityUnitsPerHour": 268.66,
+      "costPerUnit": 930.78,
+      "reliability": 0.9809,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-032",
+      "scenarioId": "s42",
+      "originId": "s42:loc-warehouse-004",
+      "destinationId": "s42:loc-destination-005",
+      "mode": "truck",
+      "transitHours": 14.95,
+      "capacityUnitsPerHour": 140.2,
+      "costPerUnit": 1256.2,
+      "reliability": 0.9348,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-033",
+      "scenarioId": "s42",
+      "originId": "s42:loc-warehouse-004",
+      "destinationId": "s42:loc-destination-004",
+      "mode": "truck",
+      "transitHours": 4.65,
+      "capacityUnitsPerHour": 315.33,
+      "costPerUnit": 390.79,
+      "reliability": 0.953,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-034",
+      "scenarioId": "s42",
+      "originId": "s42:loc-warehouse-002",
+      "destinationId": "s42:loc-destination-003",
+      "mode": "truck",
+      "transitHours": 8.82,
+      "capacityUnitsPerHour": 188.79,
+      "costPerUnit": 740.84,
+      "reliability": 0.9886,
+      "supportsColdChain": true,
+      "supportsHazmat": true,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-035",
+      "scenarioId": "s42",
+      "originId": "s42:loc-warehouse-003",
+      "destinationId": "s42:loc-destination-010",
+      "mode": "truck",
+      "transitHours": 4.53,
+      "capacityUnitsPerHour": 110.95,
+      "costPerUnit": 380.22,
+      "reliability": 0.9405,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-036",
+      "scenarioId": "s42",
+      "originId": "s42:loc-warehouse-002",
+      "destinationId": "s42:loc-destination-011",
+      "mode": "truck",
+      "transitHours": 6.74,
+      "capacityUnitsPerHour": 227.4,
+      "costPerUnit": 566.45,
+      "reliability": 0.9122,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-037",
+      "scenarioId": "s42",
+      "originId": "s42:loc-hub-002",
+      "destinationId": "s42:loc-warehouse-003",
+      "mode": "truck",
+      "transitHours": 7.47,
+      "capacityUnitsPerHour": 97.5,
+      "costPerUnit": 574.02,
+      "reliability": 0.9855,
+      "supportsColdChain": false,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-038",
+      "scenarioId": "s42",
+      "originId": "s42:loc-warehouse-003",
+      "destinationId": "s42:loc-destination-006",
+      "mode": "truck",
+      "transitHours": 10.7,
+      "capacityUnitsPerHour": 246.36,
+      "costPerUnit": 898.91,
+      "reliability": 0.9544,
+      "supportsColdChain": false,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-039",
+      "scenarioId": "s42",
+      "originId": "s42:loc-supplier-003",
+      "destinationId": "s42:loc-factory-002",
+      "mode": "truck",
+      "transitHours": 6.56,
+      "capacityUnitsPerHour": 149.24,
+      "costPerUnit": 448.49,
+      "reliability": 0.9215,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-040",
+      "scenarioId": "s42",
+      "originId": "s42:loc-hub-001",
+      "destinationId": "s42:loc-warehouse-004",
+      "mode": "truck",
+      "transitHours": 9.71,
+      "capacityUnitsPerHour": 262.05,
+      "costPerUnit": 745.38,
+      "reliability": 0.9895,
+      "supportsColdChain": false,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-041",
+      "scenarioId": "s42",
+      "originId": "s42:loc-factory-001",
+      "destinationId": "s42:loc-hub-005",
+      "mode": "rail",
+      "transitHours": 11.94,
+      "capacityUnitsPerHour": 265.57,
+      "costPerUnit": 853.69,
+      "reliability": 0.982,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-042",
+      "scenarioId": "s42",
+      "originId": "s42:loc-hub-005",
+      "destinationId": "s42:loc-warehouse-002",
+      "mode": "truck",
+      "transitHours": 7.06,
+      "capacityUnitsPerHour": 202.65,
+      "costPerUnit": 542.19,
+      "reliability": 0.9128,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    },
+    {
+      "id": "s42:lane-043",
+      "scenarioId": "s42",
+      "originId": "s42:loc-factory-001",
+      "destinationId": "s42:loc-hub-002",
+      "mode": "rail",
+      "transitHours": 12.84,
+      "capacityUnitsPerHour": 318.33,
+      "costPerUnit": 918.01,
+      "reliability": 0.9058,
+      "supportsColdChain": true,
+      "supportsHazmat": false,
+      "status": "open"
+    }
+  ],
+  "products": [
+    {
+      "id": "s42:prod-a",
+      "scenarioId": "s42",
+      "name": "Critical Load A",
+      "requiresColdChain": true,
+      "requiresHazmat": false,
+      "shelfLifeHours": 96
+    },
+    {
+      "id": "s42:prod-b",
+      "scenarioId": "s42",
+      "name": "Critical Load B",
+      "requiresColdChain": true,
+      "requiresHazmat": false,
+      "shelfLifeHours": 120
+    },
+    {
+      "id": "s42:prod-c",
+      "scenarioId": "s42",
+      "name": "Priority Load C",
+      "requiresColdChain": false,
+      "requiresHazmat": false,
+      "shelfLifeHours": null
+    },
+    {
+      "id": "s42:prod-d",
+      "scenarioId": "s42",
+      "name": "Controlled Load D",
+      "requiresColdChain": false,
+      "requiresHazmat": true,
+      "shelfLifeHours": null
+    }
+  ],
+  "substitutionGroups": [
+    {
+      "id": "s42:sub-a-b",
+      "scenarioId": "s42",
+      "name": "Critical A/B Substitute Group",
+      "notes": "",
+      "productIds": [
+        "s42:prod-a",
+        "s42:prod-b"
+      ]
+    }
+  ],
+  "commitments": [
+    {
+      "id": "s42:comm-001",
+      "scenarioId": "s42",
+      "quantity": 3386,
+      "priority": "P0",
+      "mustArriveBy": 1714615200000,
+      "delayToleranceHours": 43,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-006",
+      "tags": [
+        "hero",
+        "minDisjointPaths:2"
+      ]
+    },
+    {
+      "id": "s42:comm-002",
+      "scenarioId": "s42",
+      "quantity": 1850,
+      "priority": "P0",
+      "mustArriveBy": 1714320000000,
+      "delayToleranceHours": 21,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-b",
+      "deliveredToId": "s42:loc-destination-004",
+      "tags": [
+        "hero",
+        "minDisjointPaths:2"
+      ]
+    },
+    {
+      "id": "s42:comm-003",
+      "scenarioId": "s42",
+      "quantity": 2074,
+      "priority": "P1",
+      "mustArriveBy": 1714582800000,
+      "delayToleranceHours": 25,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-004",
+      "tags": [
+        "hero",
+        "minDisjointPaths:2"
+      ]
+    },
+    {
+      "id": "s42:comm-004",
+      "scenarioId": "s42",
+      "quantity": 722,
+      "priority": "P3",
+      "mustArriveBy": 1714658400000,
+      "delayToleranceHours": 21,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-008",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-005",
+      "scenarioId": "s42",
+      "quantity": 56,
+      "priority": "P2",
+      "mustArriveBy": 1714377600000,
+      "delayToleranceHours": 23,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-b",
+      "deliveredToId": "s42:loc-destination-012",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-006",
+      "scenarioId": "s42",
+      "quantity": 236,
+      "priority": "P2",
+      "mustArriveBy": 1714579200000,
+      "delayToleranceHours": 21,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-b",
+      "deliveredToId": "s42:loc-destination-005",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-007",
+      "scenarioId": "s42",
+      "quantity": 1349,
+      "priority": "P0",
+      "mustArriveBy": 1714341600000,
+      "delayToleranceHours": 12,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-b",
+      "deliveredToId": "s42:loc-destination-006",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-008",
+      "scenarioId": "s42",
+      "quantity": 1415,
+      "priority": "P3",
+      "mustArriveBy": 1714406400000,
+      "delayToleranceHours": 29,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-002",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-009",
+      "scenarioId": "s42",
+      "quantity": 220,
+      "priority": "P0",
+      "mustArriveBy": 1714428000000,
+      "delayToleranceHours": 2,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-004",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-010",
+      "scenarioId": "s42",
+      "quantity": 200,
+      "priority": "P3",
+      "mustArriveBy": 1714730400000,
+      "delayToleranceHours": 40,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-009",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-011",
+      "scenarioId": "s42",
+      "quantity": 1333,
+      "priority": "P1",
+      "mustArriveBy": 1714352400000,
+      "delayToleranceHours": 31,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-012",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-012",
+      "scenarioId": "s42",
+      "quantity": 231,
+      "priority": "P2",
+      "mustArriveBy": 1714417200000,
+      "delayToleranceHours": 17,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-002",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-013",
+      "scenarioId": "s42",
+      "quantity": 263,
+      "priority": "P2",
+      "mustArriveBy": 1714644000000,
+      "delayToleranceHours": 14,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-b",
+      "deliveredToId": "s42:loc-destination-007",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-014",
+      "scenarioId": "s42",
+      "quantity": 1496,
+      "priority": "P2",
+      "mustArriveBy": 1714647600000,
+      "delayToleranceHours": 45,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-006",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-015",
+      "scenarioId": "s42",
+      "quantity": 846,
+      "priority": "P1",
+      "mustArriveBy": 1714420800000,
+      "delayToleranceHours": 44,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-b",
+      "deliveredToId": "s42:loc-destination-004",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-016",
+      "scenarioId": "s42",
+      "quantity": 970,
+      "priority": "P2",
+      "mustArriveBy": 1714658400000,
+      "delayToleranceHours": 5,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-012",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-017",
+      "scenarioId": "s42",
+      "quantity": 68,
+      "priority": "P2",
+      "mustArriveBy": 1714381200000,
+      "delayToleranceHours": 13,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-004",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-018",
+      "scenarioId": "s42",
+      "quantity": 2970,
+      "priority": "P2",
+      "mustArriveBy": 1714485600000,
+      "delayToleranceHours": 17,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-009",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-019",
+      "scenarioId": "s42",
+      "quantity": 163,
+      "priority": "P3",
+      "mustArriveBy": 1714626000000,
+      "delayToleranceHours": 29,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-011",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-020",
+      "scenarioId": "s42",
+      "quantity": 65,
+      "priority": "P2",
+      "mustArriveBy": 1714737600000,
+      "delayToleranceHours": 13,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-003",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-021",
+      "scenarioId": "s42",
+      "quantity": 52,
+      "priority": "P1",
+      "mustArriveBy": 1714622400000,
+      "delayToleranceHours": 4,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-b",
+      "deliveredToId": "s42:loc-destination-008",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-022",
+      "scenarioId": "s42",
+      "quantity": 3121,
+      "priority": "P1",
+      "mustArriveBy": 1714438800000,
+      "delayToleranceHours": 4,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-b",
+      "deliveredToId": "s42:loc-destination-001",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-023",
+      "scenarioId": "s42",
+      "quantity": 735,
+      "priority": "P2",
+      "mustArriveBy": 1714820400000,
+      "delayToleranceHours": 23,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-002",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-024",
+      "scenarioId": "s42",
+      "quantity": 249,
+      "priority": "P0",
+      "mustArriveBy": 1714431600000,
+      "delayToleranceHours": 29,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-003",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-025",
+      "scenarioId": "s42",
+      "quantity": 752,
+      "priority": "P2",
+      "mustArriveBy": 1714320000000,
+      "delayToleranceHours": 28,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-b",
+      "deliveredToId": "s42:loc-destination-010",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-026",
+      "scenarioId": "s42",
+      "quantity": 1116,
+      "priority": "P2",
+      "mustArriveBy": 1714474800000,
+      "delayToleranceHours": 16,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-008",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-027",
+      "scenarioId": "s42",
+      "quantity": 4302,
+      "priority": "P2",
+      "mustArriveBy": 1714392000000,
+      "delayToleranceHours": 38,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-004",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-028",
+      "scenarioId": "s42",
+      "quantity": 753,
+      "priority": "P2",
+      "mustArriveBy": 1714813200000,
+      "delayToleranceHours": 13,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-010",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-029",
+      "scenarioId": "s42",
+      "quantity": 160,
+      "priority": "P3",
+      "mustArriveBy": 1714586400000,
+      "delayToleranceHours": 34,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-008",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-030",
+      "scenarioId": "s42",
+      "quantity": 131,
+      "priority": "P3",
+      "mustArriveBy": 1714726800000,
+      "delayToleranceHours": 14,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-005",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-031",
+      "scenarioId": "s42",
+      "quantity": 204,
+      "priority": "P2",
+      "mustArriveBy": 1714575600000,
+      "delayToleranceHours": 2,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-b",
+      "deliveredToId": "s42:loc-destination-010",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-032",
+      "scenarioId": "s42",
+      "quantity": 4208,
+      "priority": "P1",
+      "mustArriveBy": 1714546800000,
+      "delayToleranceHours": 33,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-b",
+      "deliveredToId": "s42:loc-destination-010",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-033",
+      "scenarioId": "s42",
+      "quantity": 256,
+      "priority": "P2",
+      "mustArriveBy": 1714723200000,
+      "delayToleranceHours": 42,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-003",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-034",
+      "scenarioId": "s42",
+      "quantity": 263,
+      "priority": "P0",
+      "mustArriveBy": 1714759200000,
+      "delayToleranceHours": 29,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-b",
+      "deliveredToId": "s42:loc-destination-008",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-035",
+      "scenarioId": "s42",
+      "quantity": 637,
+      "priority": "P1",
+      "mustArriveBy": 1714503600000,
+      "delayToleranceHours": 9,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-009",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-036",
+      "scenarioId": "s42",
+      "quantity": 1436,
+      "priority": "P3",
+      "mustArriveBy": 1714334400000,
+      "delayToleranceHours": 32,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-008",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-037",
+      "scenarioId": "s42",
+      "quantity": 185,
+      "priority": "P0",
+      "mustArriveBy": 1714676400000,
+      "delayToleranceHours": 17,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-010",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-038",
+      "scenarioId": "s42",
+      "quantity": 340,
+      "priority": "P1",
+      "mustArriveBy": 1714510800000,
+      "delayToleranceHours": 36,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-011",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-039",
+      "scenarioId": "s42",
+      "quantity": 3212,
+      "priority": "P2",
+      "mustArriveBy": 1714546800000,
+      "delayToleranceHours": 41,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-005",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-040",
+      "scenarioId": "s42",
+      "quantity": 346,
+      "priority": "P0",
+      "mustArriveBy": 1714708800000,
+      "delayToleranceHours": 29,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-002",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-041",
+      "scenarioId": "s42",
+      "quantity": 1959,
+      "priority": "P2",
+      "mustArriveBy": 1714766400000,
+      "delayToleranceHours": 47,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-012",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-042",
+      "scenarioId": "s42",
+      "quantity": 50,
+      "priority": "P1",
+      "mustArriveBy": 1714773600000,
+      "delayToleranceHours": 42,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-005",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-043",
+      "scenarioId": "s42",
+      "quantity": 145,
+      "priority": "P3",
+      "mustArriveBy": 1714446000000,
+      "delayToleranceHours": 15,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-b",
+      "deliveredToId": "s42:loc-destination-011",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-044",
+      "scenarioId": "s42",
+      "quantity": 1176,
+      "priority": "P0",
+      "mustArriveBy": 1714500000000,
+      "delayToleranceHours": 37,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-003",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-045",
+      "scenarioId": "s42",
+      "quantity": 62,
+      "priority": "P3",
+      "mustArriveBy": 1714662000000,
+      "delayToleranceHours": 37,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-004",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-046",
+      "scenarioId": "s42",
+      "quantity": 161,
+      "priority": "P2",
+      "mustArriveBy": 1714456800000,
+      "delayToleranceHours": 16,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-003",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-047",
+      "scenarioId": "s42",
+      "quantity": 1439,
+      "priority": "P1",
+      "mustArriveBy": 1714726800000,
+      "delayToleranceHours": 28,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-009",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-048",
+      "scenarioId": "s42",
+      "quantity": 3869,
+      "priority": "P1",
+      "mustArriveBy": 1714410000000,
+      "delayToleranceHours": 2,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-006",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-049",
+      "scenarioId": "s42",
+      "quantity": 208,
+      "priority": "P2",
+      "mustArriveBy": 1714489200000,
+      "delayToleranceHours": 13,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-004",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-050",
+      "scenarioId": "s42",
+      "quantity": 2861,
+      "priority": "P3",
+      "mustArriveBy": 1714687200000,
+      "delayToleranceHours": 15,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-b",
+      "deliveredToId": "s42:loc-destination-012",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-051",
+      "scenarioId": "s42",
+      "quantity": 99,
+      "priority": "P0",
+      "mustArriveBy": 1714770000000,
+      "delayToleranceHours": 14,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-005",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-052",
+      "scenarioId": "s42",
+      "quantity": 1464,
+      "priority": "P2",
+      "mustArriveBy": 1714611600000,
+      "delayToleranceHours": 39,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-004",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-053",
+      "scenarioId": "s42",
+      "quantity": 162,
+      "priority": "P1",
+      "mustArriveBy": 1714482000000,
+      "delayToleranceHours": 35,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-005",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-054",
+      "scenarioId": "s42",
+      "quantity": 1272,
+      "priority": "P3",
+      "mustArriveBy": 1714557600000,
+      "delayToleranceHours": 28,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-b",
+      "deliveredToId": "s42:loc-destination-009",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-055",
+      "scenarioId": "s42",
+      "quantity": 1580,
+      "priority": "P1",
+      "mustArriveBy": 1714413600000,
+      "delayToleranceHours": 43,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-002",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-056",
+      "scenarioId": "s42",
+      "quantity": 61,
+      "priority": "P2",
+      "mustArriveBy": 1714820400000,
+      "delayToleranceHours": 35,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-003",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-057",
+      "scenarioId": "s42",
+      "quantity": 571,
+      "priority": "P3",
+      "mustArriveBy": 1714626000000,
+      "delayToleranceHours": 4,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-004",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-058",
+      "scenarioId": "s42",
+      "quantity": 143,
+      "priority": "P1",
+      "mustArriveBy": 1714744800000,
+      "delayToleranceHours": 3,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-005",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-059",
+      "scenarioId": "s42",
+      "quantity": 1125,
+      "priority": "P2",
+      "mustArriveBy": 1714676400000,
+      "delayToleranceHours": 39,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-b",
+      "deliveredToId": "s42:loc-destination-004",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-060",
+      "scenarioId": "s42",
+      "quantity": 1310,
+      "priority": "P0",
+      "mustArriveBy": 1714510800000,
+      "delayToleranceHours": 3,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-006",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-061",
+      "scenarioId": "s42",
+      "quantity": 222,
+      "priority": "P1",
+      "mustArriveBy": 1714514400000,
+      "delayToleranceHours": 5,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-011",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-062",
+      "scenarioId": "s42",
+      "quantity": 487,
+      "priority": "P0",
+      "mustArriveBy": 1714413600000,
+      "delayToleranceHours": 13,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-012",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-063",
+      "scenarioId": "s42",
+      "quantity": 2481,
+      "priority": "P0",
+      "mustArriveBy": 1714428000000,
+      "delayToleranceHours": 36,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-005",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-064",
+      "scenarioId": "s42",
+      "quantity": 469,
+      "priority": "P3",
+      "mustArriveBy": 1714539600000,
+      "delayToleranceHours": 26,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-006",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-065",
+      "scenarioId": "s42",
+      "quantity": 363,
+      "priority": "P2",
+      "mustArriveBy": 1714424400000,
+      "delayToleranceHours": 25,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-005",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-066",
+      "scenarioId": "s42",
+      "quantity": 821,
+      "priority": "P0",
+      "mustArriveBy": 1714316400000,
+      "delayToleranceHours": 27,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-009",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-067",
+      "scenarioId": "s42",
+      "quantity": 756,
+      "priority": "P0",
+      "mustArriveBy": 1714543200000,
+      "delayToleranceHours": 37,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-011",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-068",
+      "scenarioId": "s42",
+      "quantity": 1363,
+      "priority": "P1",
+      "mustArriveBy": 1714647600000,
+      "delayToleranceHours": 29,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-012",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-069",
+      "scenarioId": "s42",
+      "quantity": 2858,
+      "priority": "P2",
+      "mustArriveBy": 1714453200000,
+      "delayToleranceHours": 47,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-012",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-070",
+      "scenarioId": "s42",
+      "quantity": 694,
+      "priority": "P2",
+      "mustArriveBy": 1714510800000,
+      "delayToleranceHours": 14,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-009",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-071",
+      "scenarioId": "s42",
+      "quantity": 175,
+      "priority": "P1",
+      "mustArriveBy": 1714312800000,
+      "delayToleranceHours": 26,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-001",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-072",
+      "scenarioId": "s42",
+      "quantity": 56,
+      "priority": "P0",
+      "mustArriveBy": 1714431600000,
+      "delayToleranceHours": 13,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-012",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-073",
+      "scenarioId": "s42",
+      "quantity": 73,
+      "priority": "P0",
+      "mustArriveBy": 1714539600000,
+      "delayToleranceHours": 41,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-003",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-074",
+      "scenarioId": "s42",
+      "quantity": 89,
+      "priority": "P1",
+      "mustArriveBy": 1714485600000,
+      "delayToleranceHours": 15,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-006",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-075",
+      "scenarioId": "s42",
+      "quantity": 50,
+      "priority": "P3",
+      "mustArriveBy": 1714687200000,
+      "delayToleranceHours": 40,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-009",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-076",
+      "scenarioId": "s42",
+      "quantity": 669,
+      "priority": "P1",
+      "mustArriveBy": 1714374000000,
+      "delayToleranceHours": 43,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-012",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-077",
+      "scenarioId": "s42",
+      "quantity": 94,
+      "priority": "P2",
+      "mustArriveBy": 1714579200000,
+      "delayToleranceHours": 16,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-002",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-078",
+      "scenarioId": "s42",
+      "quantity": 119,
+      "priority": "P2",
+      "mustArriveBy": 1714424400000,
+      "delayToleranceHours": 43,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-005",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-079",
+      "scenarioId": "s42",
+      "quantity": 2495,
+      "priority": "P2",
+      "mustArriveBy": 1714586400000,
+      "delayToleranceHours": 37,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-b",
+      "deliveredToId": "s42:loc-destination-011",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-080",
+      "scenarioId": "s42",
+      "quantity": 78,
+      "priority": "P1",
+      "mustArriveBy": 1714363200000,
+      "delayToleranceHours": 5,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-007",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-081",
+      "scenarioId": "s42",
+      "quantity": 154,
+      "priority": "P3",
+      "mustArriveBy": 1714586400000,
+      "delayToleranceHours": 44,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-012",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-082",
+      "scenarioId": "s42",
+      "quantity": 2796,
+      "priority": "P3",
+      "mustArriveBy": 1714399200000,
+      "delayToleranceHours": 46,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-011",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-083",
+      "scenarioId": "s42",
+      "quantity": 680,
+      "priority": "P2",
+      "mustArriveBy": 1714690800000,
+      "delayToleranceHours": 28,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-b",
+      "deliveredToId": "s42:loc-destination-003",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-084",
+      "scenarioId": "s42",
+      "quantity": 2814,
+      "priority": "P2",
+      "mustArriveBy": 1714492800000,
+      "delayToleranceHours": 33,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-007",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-085",
+      "scenarioId": "s42",
+      "quantity": 590,
+      "priority": "P1",
+      "mustArriveBy": 1714712400000,
+      "delayToleranceHours": 11,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-b",
+      "deliveredToId": "s42:loc-destination-006",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-086",
+      "scenarioId": "s42",
+      "quantity": 536,
+      "priority": "P2",
+      "mustArriveBy": 1714820400000,
+      "delayToleranceHours": 39,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-009",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-087",
+      "scenarioId": "s42",
+      "quantity": 3269,
+      "priority": "P0",
+      "mustArriveBy": 1714478400000,
+      "delayToleranceHours": 10,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-007",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-088",
+      "scenarioId": "s42",
+      "quantity": 277,
+      "priority": "P0",
+      "mustArriveBy": 1714777200000,
+      "delayToleranceHours": 30,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-008",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-089",
+      "scenarioId": "s42",
+      "quantity": 1368,
+      "priority": "P0",
+      "mustArriveBy": 1714676400000,
+      "delayToleranceHours": 4,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-008",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-090",
+      "scenarioId": "s42",
+      "quantity": 54,
+      "priority": "P2",
+      "mustArriveBy": 1714341600000,
+      "delayToleranceHours": 19,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-004",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-091",
+      "scenarioId": "s42",
+      "quantity": 168,
+      "priority": "P1",
+      "mustArriveBy": 1714770000000,
+      "delayToleranceHours": 14,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-005",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-092",
+      "scenarioId": "s42",
+      "quantity": 2594,
+      "priority": "P1",
+      "mustArriveBy": 1714777200000,
+      "delayToleranceHours": 2,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-002",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-093",
+      "scenarioId": "s42",
+      "quantity": 2926,
+      "priority": "P2",
+      "mustArriveBy": 1714345200000,
+      "delayToleranceHours": 35,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-011",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-094",
+      "scenarioId": "s42",
+      "quantity": 102,
+      "priority": "P1",
+      "mustArriveBy": 1714597200000,
+      "delayToleranceHours": 12,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-004",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-095",
+      "scenarioId": "s42",
+      "quantity": 1271,
+      "priority": "P2",
+      "mustArriveBy": 1714622400000,
+      "delayToleranceHours": 15,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-009",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-096",
+      "scenarioId": "s42",
+      "quantity": 1829,
+      "priority": "P1",
+      "mustArriveBy": 1714716000000,
+      "delayToleranceHours": 22,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-010",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-097",
+      "scenarioId": "s42",
+      "quantity": 333,
+      "priority": "P0",
+      "mustArriveBy": 1714611600000,
+      "delayToleranceHours": 30,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-001",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-098",
+      "scenarioId": "s42",
+      "quantity": 2903,
+      "priority": "P3",
+      "mustArriveBy": 1714374000000,
+      "delayToleranceHours": 14,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-003",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-099",
+      "scenarioId": "s42",
+      "quantity": 579,
+      "priority": "P0",
+      "mustArriveBy": 1714420800000,
+      "delayToleranceHours": 48,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-b",
+      "deliveredToId": "s42:loc-destination-011",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-100",
+      "scenarioId": "s42",
+      "quantity": 4065,
+      "priority": "P2",
+      "mustArriveBy": 1714809600000,
+      "delayToleranceHours": 2,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-002",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-101",
+      "scenarioId": "s42",
+      "quantity": 4428,
+      "priority": "P3",
+      "mustArriveBy": 1714345200000,
+      "delayToleranceHours": 6,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-010",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-102",
+      "scenarioId": "s42",
+      "quantity": 302,
+      "priority": "P2",
+      "mustArriveBy": 1714500000000,
+      "delayToleranceHours": 9,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-b",
+      "deliveredToId": "s42:loc-destination-009",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-103",
+      "scenarioId": "s42",
+      "quantity": 1550,
+      "priority": "P2",
+      "mustArriveBy": 1714543200000,
+      "delayToleranceHours": 24,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-b",
+      "deliveredToId": "s42:loc-destination-007",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-104",
+      "scenarioId": "s42",
+      "quantity": 125,
+      "priority": "P3",
+      "mustArriveBy": 1714399200000,
+      "delayToleranceHours": 48,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-004",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-105",
+      "scenarioId": "s42",
+      "quantity": 273,
+      "priority": "P1",
+      "mustArriveBy": 1714683600000,
+      "delayToleranceHours": 23,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-007",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-106",
+      "scenarioId": "s42",
+      "quantity": 2604,
+      "priority": "P0",
+      "mustArriveBy": 1714446000000,
+      "delayToleranceHours": 25,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-b",
+      "deliveredToId": "s42:loc-destination-002",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-107",
+      "scenarioId": "s42",
+      "quantity": 3295,
+      "priority": "P2",
+      "mustArriveBy": 1714449600000,
+      "delayToleranceHours": 36,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-d",
+      "deliveredToId": "s42:loc-destination-011",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-108",
+      "scenarioId": "s42",
+      "quantity": 276,
+      "priority": "P1",
+      "mustArriveBy": 1714816800000,
+      "delayToleranceHours": 26,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-005",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-109",
+      "scenarioId": "s42",
+      "quantity": 1545,
+      "priority": "P1",
+      "mustArriveBy": 1714636800000,
+      "delayToleranceHours": 41,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-007",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-110",
+      "scenarioId": "s42",
+      "quantity": 838,
+      "priority": "P2",
+      "mustArriveBy": 1714636800000,
+      "delayToleranceHours": 23,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-005",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-111",
+      "scenarioId": "s42",
+      "quantity": 644,
+      "priority": "P0",
+      "mustArriveBy": 1714694400000,
+      "delayToleranceHours": 33,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-011",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-112",
+      "scenarioId": "s42",
+      "quantity": 116,
+      "priority": "P2",
+      "mustArriveBy": 1714712400000,
+      "delayToleranceHours": 18,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-003",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-113",
+      "scenarioId": "s42",
+      "quantity": 250,
+      "priority": "P3",
+      "mustArriveBy": 1714406400000,
+      "delayToleranceHours": 39,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-001",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-114",
+      "scenarioId": "s42",
+      "quantity": 1803,
+      "priority": "P0",
+      "mustArriveBy": 1714492800000,
+      "delayToleranceHours": 38,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-007",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-115",
+      "scenarioId": "s42",
+      "quantity": 72,
+      "priority": "P1",
+      "mustArriveBy": 1714755600000,
+      "delayToleranceHours": 29,
+      "penaltyCurve": "exponential",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-002",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-116",
+      "scenarioId": "s42",
+      "quantity": 837,
+      "priority": "P3",
+      "mustArriveBy": 1714431600000,
+      "delayToleranceHours": 24,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-008",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-117",
+      "scenarioId": "s42",
+      "quantity": 279,
+      "priority": "P2",
+      "mustArriveBy": 1714424400000,
+      "delayToleranceHours": 28,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-001",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-118",
+      "scenarioId": "s42",
+      "quantity": 90,
+      "priority": "P2",
+      "mustArriveBy": 1714518000000,
+      "delayToleranceHours": 17,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-b",
+      "deliveredToId": "s42:loc-destination-002",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-119",
+      "scenarioId": "s42",
+      "quantity": 200,
+      "priority": "P2",
+      "mustArriveBy": 1714417200000,
+      "delayToleranceHours": 10,
+      "penaltyCurve": "ramp",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-a",
+      "deliveredToId": "s42:loc-destination-008",
+      "tags": []
+    },
+    {
+      "id": "s42:comm-120",
+      "scenarioId": "s42",
+      "quantity": 309,
+      "priority": "P0",
+      "mustArriveBy": 1714456800000,
+      "delayToleranceHours": 7,
+      "penaltyCurve": "cliff",
+      "status": "open",
+      "baselineRisk": 0,
+      "currentRisk": 0,
+      "requiredProductId": "s42:prod-c",
+      "deliveredToId": "s42:loc-destination-009",
+      "tags": []
+    }
+  ],
+  "shipments": [
+    {
+      "id": "s42:ship-001",
+      "scenarioId": "s42",
+      "quantity": 3556,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714299516000,
+      "currentEta": 1714299516000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-a",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-006",
+      "laneSequence": [
+        "s42:lane-010",
+        "s42:lane-020",
+        "s42:lane-038"
+      ]
+    },
+    {
+      "id": "s42:ship-002",
+      "scenarioId": "s42",
+      "quantity": 1943,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714316040000,
+      "currentEta": 1714316040000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-b",
+      "originId": "s42:loc-supplier-003",
+      "destinationId": "s42:loc-destination-004",
+      "laneSequence": [
+        "s42:lane-039",
+        "s42:lane-009",
+        "s42:lane-019",
+        "s42:lane-026"
+      ]
+    },
+    {
+      "id": "s42:ship-003",
+      "scenarioId": "s42",
+      "quantity": 2178,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714298328000,
+      "currentEta": 1714298328000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-c",
+      "originId": "s42:loc-factory-001",
+      "destinationId": "s42:loc-destination-004",
+      "laneSequence": [
+        "s42:lane-043",
+        "s42:lane-017",
+        "s42:lane-033"
+      ]
+    },
+    {
+      "id": "s42:ship-004",
+      "scenarioId": "s42",
+      "quantity": 759,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714274676000,
+      "currentEta": 1714274676000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-d",
+      "originId": "s42:loc-factory-002",
+      "destinationId": "s42:loc-destination-008",
+      "laneSequence": [
+        "s42:lane-009",
+        "s42:lane-019",
+        "s42:lane-028"
+      ]
+    },
+    {
+      "id": "s42:ship-005",
+      "scenarioId": "s42",
+      "quantity": 59,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714311792000,
+      "currentEta": 1714311792000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-b",
+      "originId": "s42:loc-supplier-003",
+      "destinationId": "s42:loc-destination-012",
+      "laneSequence": [
+        "s42:lane-039",
+        "s42:lane-009",
+        "s42:lane-020",
+        "s42:lane-030"
+      ]
+    },
+    {
+      "id": "s42:ship-006",
+      "scenarioId": "s42",
+      "quantity": 248,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714304844000,
+      "currentEta": 1714304844000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-b",
+      "originId": "s42:loc-supplier-003",
+      "destinationId": "s42:loc-destination-005",
+      "laneSequence": [
+        "s42:lane-039",
+        "s42:lane-008",
+        "s42:lane-013",
+        "s42:lane-025"
+      ]
+    },
+    {
+      "id": "s42:ship-007",
+      "scenarioId": "s42",
+      "quantity": 1417,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714320720000,
+      "currentEta": 1714320720000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-b",
+      "originId": "s42:loc-supplier-003",
+      "destinationId": "s42:loc-destination-006",
+      "laneSequence": [
+        "s42:lane-039",
+        "s42:lane-009",
+        "s42:lane-020",
+        "s42:lane-038"
+      ]
+    },
+    {
+      "id": "s42:ship-008",
+      "scenarioId": "s42",
+      "quantity": 1486,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714293360000,
+      "currentEta": 1714293360000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-d",
+      "originId": "s42:loc-factory-002",
+      "destinationId": "s42:loc-destination-002",
+      "laneSequence": [
+        "s42:lane-009",
+        "s42:lane-019",
+        "s42:lane-027"
+      ]
+    },
+    {
+      "id": "s42:ship-009",
+      "scenarioId": "s42",
+      "quantity": 2724,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714293360000,
+      "currentEta": 1714293360000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-d",
+      "originId": "s42:loc-factory-002",
+      "destinationId": "s42:loc-destination-002",
+      "laneSequence": [
+        "s42:lane-009",
+        "s42:lane-019",
+        "s42:lane-027"
+      ]
+    },
+    {
+      "id": "s42:ship-010",
+      "scenarioId": "s42",
+      "quantity": 231,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714290084000,
+      "currentEta": 1714290084000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-a",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-004",
+      "laneSequence": [
+        "s42:lane-012",
+        "s42:lane-017",
+        "s42:lane-033"
+      ]
+    },
+    {
+      "id": "s42:ship-011",
+      "scenarioId": "s42",
+      "quantity": 1538,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714290084000,
+      "currentEta": 1714290084000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-a",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-004",
+      "laneSequence": [
+        "s42:lane-012",
+        "s42:lane-017",
+        "s42:lane-033"
+      ]
+    },
+    {
+      "id": "s42:ship-012",
+      "scenarioId": "s42",
+      "quantity": 210,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714321224000,
+      "currentEta": 1714321224000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-c",
+      "originId": "s42:loc-supplier-003",
+      "destinationId": "s42:loc-destination-009",
+      "laneSequence": [
+        "s42:lane-039",
+        "s42:lane-008",
+        "s42:lane-013",
+        "s42:lane-023"
+      ]
+    },
+    {
+      "id": "s42:ship-013",
+      "scenarioId": "s42",
+      "quantity": 1400,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714290588000,
+      "currentEta": 1714290588000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-a",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-012",
+      "laneSequence": [
+        "s42:lane-010",
+        "s42:lane-020",
+        "s42:lane-030"
+      ]
+    },
+    {
+      "id": "s42:ship-014",
+      "scenarioId": "s42",
+      "quantity": 162,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714290588000,
+      "currentEta": 1714290588000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-a",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-012",
+      "laneSequence": [
+        "s42:lane-010",
+        "s42:lane-020",
+        "s42:lane-030"
+      ]
+    },
+    {
+      "id": "s42:ship-015",
+      "scenarioId": "s42",
+      "quantity": 277,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714333824000,
+      "currentEta": 1714333824000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-b",
+      "originId": "s42:loc-supplier-003",
+      "destinationId": "s42:loc-destination-007",
+      "laneSequence": [
+        "s42:lane-039",
+        "s42:lane-009",
+        "s42:lane-019",
+        "s42:lane-029"
+      ]
+    },
+    {
+      "id": "s42:ship-016",
+      "scenarioId": "s42",
+      "quantity": 1571,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714297104000,
+      "currentEta": 1714297104000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-d",
+      "originId": "s42:loc-factory-002",
+      "destinationId": "s42:loc-destination-006",
+      "laneSequence": [
+        "s42:lane-009",
+        "s42:lane-020",
+        "s42:lane-038"
+      ]
+    },
+    {
+      "id": "s42:ship-017",
+      "scenarioId": "s42",
+      "quantity": 72,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714290084000,
+      "currentEta": 1714290084000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-c",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-004",
+      "laneSequence": [
+        "s42:lane-012",
+        "s42:lane-017",
+        "s42:lane-033"
+      ]
+    },
+    {
+      "id": "s42:ship-018",
+      "scenarioId": "s42",
+      "quantity": 3119,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714297608000,
+      "currentEta": 1714297608000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-d",
+      "originId": "s42:loc-factory-002",
+      "destinationId": "s42:loc-destination-009",
+      "laneSequence": [
+        "s42:lane-008",
+        "s42:lane-013",
+        "s42:lane-023"
+      ]
+    },
+    {
+      "id": "s42:ship-019",
+      "scenarioId": "s42",
+      "quantity": 53,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714297608000,
+      "currentEta": 1714297608000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-d",
+      "originId": "s42:loc-factory-002",
+      "destinationId": "s42:loc-destination-009",
+      "laneSequence": [
+        "s42:lane-008",
+        "s42:lane-013",
+        "s42:lane-023"
+      ]
+    },
+    {
+      "id": "s42:ship-020",
+      "scenarioId": "s42",
+      "quantity": 3988,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714285908000,
+      "currentEta": 1714285908000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-d",
+      "originId": "s42:loc-factory-002",
+      "destinationId": "s42:loc-destination-011",
+      "laneSequence": [
+        "s42:lane-009",
+        "s42:lane-019",
+        "s42:lane-036"
+      ]
+    },
+    {
+      "id": "s42:ship-021",
+      "scenarioId": "s42",
+      "quantity": 1565,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714295808000,
+      "currentEta": 1714295808000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-c",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-003",
+      "laneSequence": [
+        "s42:lane-010",
+        "s42:lane-019",
+        "s42:lane-034"
+      ]
+    },
+    {
+      "id": "s42:ship-022",
+      "scenarioId": "s42",
+      "quantity": 186,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714295808000,
+      "currentEta": 1714295808000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-c",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-003",
+      "laneSequence": [
+        "s42:lane-010",
+        "s42:lane-019",
+        "s42:lane-034"
+      ]
+    },
+    {
+      "id": "s42:ship-023",
+      "scenarioId": "s42",
+      "quantity": 331,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714298292000,
+      "currentEta": 1714298292000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-b",
+      "originId": "s42:loc-supplier-003",
+      "destinationId": "s42:loc-destination-008",
+      "laneSequence": [
+        "s42:lane-039",
+        "s42:lane-009",
+        "s42:lane-019",
+        "s42:lane-028"
+      ]
+    },
+    {
+      "id": "s42:ship-024",
+      "scenarioId": "s42",
+      "quantity": 3278,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714322088000,
+      "currentEta": 1714322088000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-b",
+      "originId": "s42:loc-supplier-003",
+      "destinationId": "s42:loc-destination-001",
+      "laneSequence": [
+        "s42:lane-039",
+        "s42:lane-009",
+        "s42:lane-020",
+        "s42:lane-031"
+      ]
+    },
+    {
+      "id": "s42:ship-025",
+      "scenarioId": "s42",
+      "quantity": 5423,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714298508000,
+      "currentEta": 1714298508000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-b",
+      "originId": "s42:loc-supplier-003",
+      "destinationId": "s42:loc-destination-010",
+      "laneSequence": [
+        "s42:lane-039",
+        "s42:lane-009",
+        "s42:lane-020",
+        "s42:lane-035"
+      ]
+    },
+    {
+      "id": "s42:ship-026",
+      "scenarioId": "s42",
+      "quantity": 2971,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714277088000,
+      "currentEta": 1714277088000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-a",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-008",
+      "laneSequence": [
+        "s42:lane-010",
+        "s42:lane-019",
+        "s42:lane-028"
+      ]
+    },
+    {
+      "id": "s42:ship-027",
+      "scenarioId": "s42",
+      "quantity": 210,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714277088000,
+      "currentEta": 1714277088000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-a",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-008",
+      "laneSequence": [
+        "s42:lane-010",
+        "s42:lane-019",
+        "s42:lane-028"
+      ]
+    },
+    {
+      "id": "s42:ship-028",
+      "scenarioId": "s42",
+      "quantity": 4518,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714292424000,
+      "currentEta": 1714292424000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-d",
+      "originId": "s42:loc-factory-002",
+      "destinationId": "s42:loc-destination-004",
+      "laneSequence": [
+        "s42:lane-009",
+        "s42:lane-019",
+        "s42:lane-026"
+      ]
+    },
+    {
+      "id": "s42:ship-029",
+      "scenarioId": "s42",
+      "quantity": 2906,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714277304000,
+      "currentEta": 1714277304000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-c",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-010",
+      "laneSequence": [
+        "s42:lane-010",
+        "s42:lane-020",
+        "s42:lane-035"
+      ]
+    },
+    {
+      "id": "s42:ship-030",
+      "scenarioId": "s42",
+      "quantity": 1047,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714277088000,
+      "currentEta": 1714277088000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-c",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-008",
+      "laneSequence": [
+        "s42:lane-010",
+        "s42:lane-019",
+        "s42:lane-028"
+      ]
+    },
+    {
+      "id": "s42:ship-031",
+      "scenarioId": "s42",
+      "quantity": 3615,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714304844000,
+      "currentEta": 1714304844000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-c",
+      "originId": "s42:loc-supplier-003",
+      "destinationId": "s42:loc-destination-005",
+      "laneSequence": [
+        "s42:lane-039",
+        "s42:lane-008",
+        "s42:lane-013",
+        "s42:lane-025"
+      ]
+    },
+    {
+      "id": "s42:ship-032",
+      "scenarioId": "s42",
+      "quantity": 677,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714304844000,
+      "currentEta": 1714304844000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-c",
+      "originId": "s42:loc-supplier-003",
+      "destinationId": "s42:loc-destination-005",
+      "laneSequence": [
+        "s42:lane-039",
+        "s42:lane-008",
+        "s42:lane-013",
+        "s42:lane-025"
+      ]
+    },
+    {
+      "id": "s42:ship-033",
+      "scenarioId": "s42",
+      "quantity": 1057,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714304844000,
+      "currentEta": 1714304844000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-c",
+      "originId": "s42:loc-supplier-003",
+      "destinationId": "s42:loc-destination-005",
+      "laneSequence": [
+        "s42:lane-039",
+        "s42:lane-008",
+        "s42:lane-013",
+        "s42:lane-025"
+      ]
+    },
+    {
+      "id": "s42:ship-034",
+      "scenarioId": "s42",
+      "quantity": 3317,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714295808000,
+      "currentEta": 1714295808000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-a",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-003",
+      "laneSequence": [
+        "s42:lane-010",
+        "s42:lane-019",
+        "s42:lane-034"
+      ]
+    },
+    {
+      "id": "s42:ship-035",
+      "scenarioId": "s42",
+      "quantity": 2094,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714320036000,
+      "currentEta": 1714320036000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-a",
+      "originId": "s42:loc-supplier-002",
+      "destinationId": "s42:loc-destination-009",
+      "laneSequence": [
+        "s42:lane-003",
+        "s42:lane-008",
+        "s42:lane-013",
+        "s42:lane-023"
+      ]
+    },
+    {
+      "id": "s42:ship-036",
+      "scenarioId": "s42",
+      "quantity": 364,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714295772000,
+      "currentEta": 1714295772000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-c",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-002",
+      "laneSequence": [
+        "s42:lane-010",
+        "s42:lane-019",
+        "s42:lane-027"
+      ]
+    },
+    {
+      "id": "s42:ship-037",
+      "scenarioId": "s42",
+      "quantity": 2658,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714281228000,
+      "currentEta": 1714281228000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-d",
+      "originId": "s42:loc-factory-002",
+      "destinationId": "s42:loc-destination-005",
+      "laneSequence": [
+        "s42:lane-008",
+        "s42:lane-013",
+        "s42:lane-025"
+      ]
+    },
+    {
+      "id": "s42:ship-038",
+      "scenarioId": "s42",
+      "quantity": 3380,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714309524000,
+      "currentEta": 1714309524000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-b",
+      "originId": "s42:loc-supplier-003",
+      "destinationId": "s42:loc-destination-011",
+      "laneSequence": [
+        "s42:lane-039",
+        "s42:lane-009",
+        "s42:lane-019",
+        "s42:lane-036"
+      ]
+    },
+    {
+      "id": "s42:ship-039",
+      "scenarioId": "s42",
+      "quantity": 246,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714293396000,
+      "currentEta": 1714293396000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-d",
+      "originId": "s42:loc-factory-002",
+      "destinationId": "s42:loc-destination-003",
+      "laneSequence": [
+        "s42:lane-009",
+        "s42:lane-019",
+        "s42:lane-034"
+      ]
+    },
+    {
+      "id": "s42:ship-040",
+      "scenarioId": "s42",
+      "quantity": 1653,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714321224000,
+      "currentEta": 1714321224000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-b",
+      "originId": "s42:loc-supplier-003",
+      "destinationId": "s42:loc-destination-009",
+      "laneSequence": [
+        "s42:lane-039",
+        "s42:lane-008",
+        "s42:lane-013",
+        "s42:lane-023"
+      ]
+    },
+    {
+      "id": "s42:ship-041",
+      "scenarioId": "s42",
+      "quantity": 1834,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714295772000,
+      "currentEta": 1714295772000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-a",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-002",
+      "laneSequence": [
+        "s42:lane-010",
+        "s42:lane-019",
+        "s42:lane-027"
+      ]
+    },
+    {
+      "id": "s42:ship-042",
+      "scenarioId": "s42",
+      "quantity": 440,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714303656000,
+      "currentEta": 1714303656000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-a",
+      "originId": "s42:loc-supplier-002",
+      "destinationId": "s42:loc-destination-005",
+      "laneSequence": [
+        "s42:lane-003",
+        "s42:lane-008",
+        "s42:lane-013",
+        "s42:lane-025"
+      ]
+    },
+    {
+      "id": "s42:ship-043",
+      "scenarioId": "s42",
+      "quantity": 1376,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714299516000,
+      "currentEta": 1714299516000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-c",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-006",
+      "laneSequence": [
+        "s42:lane-010",
+        "s42:lane-020",
+        "s42:lane-038"
+      ]
+    },
+    {
+      "id": "s42:ship-044",
+      "scenarioId": "s42",
+      "quantity": 3963,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714288320000,
+      "currentEta": 1714288320000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-c",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-011",
+      "laneSequence": [
+        "s42:lane-010",
+        "s42:lane-019",
+        "s42:lane-036"
+      ]
+    },
+    {
+      "id": "s42:ship-045",
+      "scenarioId": "s42",
+      "quantity": 571,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714288176000,
+      "currentEta": 1714288176000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-d",
+      "originId": "s42:loc-factory-002",
+      "destinationId": "s42:loc-destination-012",
+      "laneSequence": [
+        "s42:lane-009",
+        "s42:lane-020",
+        "s42:lane-030"
+      ]
+    },
+    {
+      "id": "s42:ship-046",
+      "scenarioId": "s42",
+      "quantity": 5135,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714290588000,
+      "currentEta": 1714290588000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-c",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-012",
+      "laneSequence": [
+        "s42:lane-010",
+        "s42:lane-020",
+        "s42:lane-030"
+      ]
+    },
+    {
+      "id": "s42:ship-047",
+      "scenarioId": "s42",
+      "quantity": 534,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714298472000,
+      "currentEta": 1714298472000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-d",
+      "originId": "s42:loc-factory-002",
+      "destinationId": "s42:loc-destination-001",
+      "laneSequence": [
+        "s42:lane-009",
+        "s42:lane-020",
+        "s42:lane-031"
+      ]
+    },
+    {
+      "id": "s42:ship-048",
+      "scenarioId": "s42",
+      "quantity": 82,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714310208000,
+      "currentEta": 1714310208000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-d",
+      "originId": "s42:loc-factory-002",
+      "destinationId": "s42:loc-destination-007",
+      "laneSequence": [
+        "s42:lane-009",
+        "s42:lane-019",
+        "s42:lane-029"
+      ]
+    },
+    {
+      "id": "s42:ship-049",
+      "scenarioId": "s42",
+      "quantity": 714,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714317012000,
+      "currentEta": 1714317012000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-b",
+      "originId": "s42:loc-supplier-003",
+      "destinationId": "s42:loc-destination-003",
+      "laneSequence": [
+        "s42:lane-039",
+        "s42:lane-009",
+        "s42:lane-019",
+        "s42:lane-034"
+      ]
+    },
+    {
+      "id": "s42:ship-050",
+      "scenarioId": "s42",
+      "quantity": 4864,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714312620000,
+      "currentEta": 1714312620000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-c",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-007",
+      "laneSequence": [
+        "s42:lane-010",
+        "s42:lane-019",
+        "s42:lane-029"
+      ]
+    },
+    {
+      "id": "s42:ship-051",
+      "scenarioId": "s42",
+      "quantity": 5326,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714312620000,
+      "currentEta": 1714312620000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-a",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-007",
+      "laneSequence": [
+        "s42:lane-010",
+        "s42:lane-019",
+        "s42:lane-029"
+      ]
+    },
+    {
+      "id": "s42:ship-052",
+      "scenarioId": "s42",
+      "quantity": 3749,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714288320000,
+      "currentEta": 1714288320000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-a",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-011",
+      "laneSequence": [
+        "s42:lane-010",
+        "s42:lane-019",
+        "s42:lane-036"
+      ]
+    },
+    {
+      "id": "s42:ship-053",
+      "scenarioId": "s42",
+      "quantity": 4650,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714274892000,
+      "currentEta": 1714274892000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-d",
+      "originId": "s42:loc-factory-002",
+      "destinationId": "s42:loc-destination-010",
+      "laneSequence": [
+        "s42:lane-009",
+        "s42:lane-020",
+        "s42:lane-035"
+      ]
+    },
+    {
+      "id": "s42:ship-054",
+      "scenarioId": "s42",
+      "quantity": 2829,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714316976000,
+      "currentEta": 1714316976000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-b",
+      "originId": "s42:loc-supplier-003",
+      "destinationId": "s42:loc-destination-002",
+      "laneSequence": [
+        "s42:lane-039",
+        "s42:lane-009",
+        "s42:lane-019",
+        "s42:lane-027"
+      ]
+    },
+    {
+      "id": "s42:ship-055",
+      "scenarioId": "s42",
+      "quantity": 263,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714300884000,
+      "currentEta": 1714300884000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-a",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-001",
+      "laneSequence": [
+        "s42:lane-010",
+        "s42:lane-020",
+        "s42:lane-031"
+      ]
+    },
+    {
+      "id": "s42:ship-056",
+      "scenarioId": "s42",
+      "quantity": 293,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714300884000,
+      "currentEta": 1714300884000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-c",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-001",
+      "laneSequence": [
+        "s42:lane-010",
+        "s42:lane-020",
+        "s42:lane-031"
+      ]
+    },
+    {
+      "id": "s42:ship-057",
+      "scenarioId": "s42",
+      "quantity": 94,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714299516000,
+      "currentEta": 1714299516000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-a",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-006",
+      "laneSequence": [
+        "s42:lane-010",
+        "s42:lane-020",
+        "s42:lane-038"
+      ]
+    },
+    {
+      "id": "s42:ship-058",
+      "scenarioId": "s42",
+      "quantity": 1182,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714316040000,
+      "currentEta": 1714316040000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-b",
+      "originId": "s42:loc-supplier-003",
+      "destinationId": "s42:loc-destination-004",
+      "laneSequence": [
+        "s42:lane-039",
+        "s42:lane-009",
+        "s42:lane-019",
+        "s42:lane-026"
+      ]
+    },
+    {
+      "id": "s42:ship-059",
+      "scenarioId": "s42",
+      "quantity": 889,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714316040000,
+      "currentEta": 1714316040000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-b",
+      "originId": "s42:loc-supplier-003",
+      "destinationId": "s42:loc-destination-004",
+      "laneSequence": [
+        "s42:lane-039",
+        "s42:lane-009",
+        "s42:lane-019",
+        "s42:lane-026"
+      ]
+    },
+    {
+      "id": "s42:ship-060",
+      "scenarioId": "s42",
+      "quantity": 1437,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714274676000,
+      "currentEta": 1714274676000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-d",
+      "originId": "s42:loc-factory-002",
+      "destinationId": "s42:loc-destination-008",
+      "laneSequence": [
+        "s42:lane-009",
+        "s42:lane-019",
+        "s42:lane-028"
+      ]
+    },
+    {
+      "id": "s42:ship-061",
+      "scenarioId": "s42",
+      "quantity": 3005,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714311792000,
+      "currentEta": 1714311792000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-b",
+      "originId": "s42:loc-supplier-003",
+      "destinationId": "s42:loc-destination-012",
+      "laneSequence": [
+        "s42:lane-039",
+        "s42:lane-009",
+        "s42:lane-020",
+        "s42:lane-030"
+      ]
+    },
+    {
+      "id": "s42:ship-062",
+      "scenarioId": "s42",
+      "quantity": 620,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714320720000,
+      "currentEta": 1714320720000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-b",
+      "originId": "s42:loc-supplier-003",
+      "destinationId": "s42:loc-destination-006",
+      "laneSequence": [
+        "s42:lane-039",
+        "s42:lane-009",
+        "s42:lane-020",
+        "s42:lane-038"
+      ]
+    },
+    {
+      "id": "s42:ship-063",
+      "scenarioId": "s42",
+      "quantity": 772,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714293360000,
+      "currentEta": 1714293360000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-d",
+      "originId": "s42:loc-factory-002",
+      "destinationId": "s42:loc-destination-002",
+      "laneSequence": [
+        "s42:lane-009",
+        "s42:lane-019",
+        "s42:lane-027"
+      ]
+    },
+    {
+      "id": "s42:ship-064",
+      "scenarioId": "s42",
+      "quantity": 243,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714293360000,
+      "currentEta": 1714293360000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-d",
+      "originId": "s42:loc-factory-002",
+      "destinationId": "s42:loc-destination-002",
+      "laneSequence": [
+        "s42:lane-009",
+        "s42:lane-019",
+        "s42:lane-027"
+      ]
+    },
+    {
+      "id": "s42:ship-065",
+      "scenarioId": "s42",
+      "quantity": 4269,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714293360000,
+      "currentEta": 1714293360000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-d",
+      "originId": "s42:loc-factory-002",
+      "destinationId": "s42:loc-destination-002",
+      "laneSequence": [
+        "s42:lane-009",
+        "s42:lane-019",
+        "s42:lane-027"
+      ]
+    },
+    {
+      "id": "s42:ship-066",
+      "scenarioId": "s42",
+      "quantity": 219,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714290084000,
+      "currentEta": 1714290084000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-a",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-004",
+      "laneSequence": [
+        "s42:lane-012",
+        "s42:lane-017",
+        "s42:lane-033"
+      ]
+    },
+    {
+      "id": "s42:ship-067",
+      "scenarioId": "s42",
+      "quantity": 66,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714290084000,
+      "currentEta": 1714290084000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-a",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-004",
+      "laneSequence": [
+        "s42:lane-012",
+        "s42:lane-017",
+        "s42:lane-033"
+      ]
+    },
+    {
+      "id": "s42:ship-068",
+      "scenarioId": "s42",
+      "quantity": 108,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714290084000,
+      "currentEta": 1714290084000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-a",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-004",
+      "laneSequence": [
+        "s42:lane-012",
+        "s42:lane-017",
+        "s42:lane-033"
+      ]
+    },
+    {
+      "id": "s42:ship-069",
+      "scenarioId": "s42",
+      "quantity": 57,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714290084000,
+      "currentEta": 1714290084000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-a",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-004",
+      "laneSequence": [
+        "s42:lane-012",
+        "s42:lane-017",
+        "s42:lane-033"
+      ]
+    },
+    {
+      "id": "s42:ship-070",
+      "scenarioId": "s42",
+      "quantity": 325,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714321224000,
+      "currentEta": 1714321224000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-c",
+      "originId": "s42:loc-supplier-003",
+      "destinationId": "s42:loc-destination-009",
+      "laneSequence": [
+        "s42:lane-039",
+        "s42:lane-008",
+        "s42:lane-013",
+        "s42:lane-023"
+      ]
+    },
+    {
+      "id": "s42:ship-071",
+      "scenarioId": "s42",
+      "quantity": 1335,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714321224000,
+      "currentEta": 1714321224000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-c",
+      "originId": "s42:loc-supplier-003",
+      "destinationId": "s42:loc-destination-009",
+      "laneSequence": [
+        "s42:lane-039",
+        "s42:lane-008",
+        "s42:lane-013",
+        "s42:lane-023"
+      ]
+    },
+    {
+      "id": "s42:ship-072",
+      "scenarioId": "s42",
+      "quantity": 2057,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714290588000,
+      "currentEta": 1714290588000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-a",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-012",
+      "laneSequence": [
+        "s42:lane-010",
+        "s42:lane-020",
+        "s42:lane-030"
+      ]
+    },
+    {
+      "id": "s42:ship-073",
+      "scenarioId": "s42",
+      "quantity": 1019,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714290588000,
+      "currentEta": 1714290588000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-a",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-012",
+      "laneSequence": [
+        "s42:lane-010",
+        "s42:lane-020",
+        "s42:lane-030"
+      ]
+    },
+    {
+      "id": "s42:ship-074",
+      "scenarioId": "s42",
+      "quantity": 1628,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714333824000,
+      "currentEta": 1714333824000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-b",
+      "originId": "s42:loc-supplier-003",
+      "destinationId": "s42:loc-destination-007",
+      "laneSequence": [
+        "s42:lane-039",
+        "s42:lane-009",
+        "s42:lane-019",
+        "s42:lane-029"
+      ]
+    },
+    {
+      "id": "s42:ship-075",
+      "scenarioId": "s42",
+      "quantity": 493,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714297104000,
+      "currentEta": 1714297104000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-d",
+      "originId": "s42:loc-factory-002",
+      "destinationId": "s42:loc-destination-006",
+      "laneSequence": [
+        "s42:lane-009",
+        "s42:lane-020",
+        "s42:lane-038"
+      ]
+    },
+    {
+      "id": "s42:ship-076",
+      "scenarioId": "s42",
+      "quantity": 4063,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714297104000,
+      "currentEta": 1714297104000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-d",
+      "originId": "s42:loc-factory-002",
+      "destinationId": "s42:loc-destination-006",
+      "laneSequence": [
+        "s42:lane-009",
+        "s42:lane-020",
+        "s42:lane-038"
+      ]
+    },
+    {
+      "id": "s42:ship-077",
+      "scenarioId": "s42",
+      "quantity": 132,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714290084000,
+      "currentEta": 1714290084000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-c",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-004",
+      "laneSequence": [
+        "s42:lane-012",
+        "s42:lane-017",
+        "s42:lane-033"
+      ]
+    },
+    {
+      "id": "s42:ship-078",
+      "scenarioId": "s42",
+      "quantity": 600,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714290084000,
+      "currentEta": 1714290084000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-c",
+      "originId": "s42:loc-factory-003",
+      "destinationId": "s42:loc-destination-004",
+      "laneSequence": [
+        "s42:lane-012",
+        "s42:lane-017",
+        "s42:lane-033"
+      ]
+    },
+    {
+      "id": "s42:ship-079",
+      "scenarioId": "s42",
+      "quantity": 729,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714297608000,
+      "currentEta": 1714297608000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-d",
+      "originId": "s42:loc-factory-002",
+      "destinationId": "s42:loc-destination-009",
+      "laneSequence": [
+        "s42:lane-008",
+        "s42:lane-013",
+        "s42:lane-023"
+      ]
+    },
+    {
+      "id": "s42:ship-080",
+      "scenarioId": "s42",
+      "quantity": 1511,
+      "originType": "location",
+      "status": "pending",
+      "baselineEta": 1714297608000,
+      "currentEta": 1714297608000,
+      "currentLaneIndex": 0,
+      "progressFraction": 0,
+      "productId": "s42:prod-d",
+      "originId": "s42:loc-factory-002",
+      "destinationId": "s42:loc-destination-009",
+      "laneSequence": [
+        "s42:lane-008",
+        "s42:lane-013",
+        "s42:lane-023"
+      ]
+    }
+  ],
+  "fulfillments": [
+    {
+      "shipmentId": "s42:ship-001",
+      "commitmentId": "s42:comm-001",
+      "quantity": 3386
+    },
+    {
+      "shipmentId": "s42:ship-002",
+      "commitmentId": "s42:comm-002",
+      "quantity": 1850
+    },
+    {
+      "shipmentId": "s42:ship-003",
+      "commitmentId": "s42:comm-003",
+      "quantity": 2074
+    },
+    {
+      "shipmentId": "s42:ship-004",
+      "commitmentId": "s42:comm-004",
+      "quantity": 722
+    },
+    {
+      "shipmentId": "s42:ship-005",
+      "commitmentId": "s42:comm-005",
+      "quantity": 56
+    },
+    {
+      "shipmentId": "s42:ship-006",
+      "commitmentId": "s42:comm-006",
+      "quantity": 236
+    },
+    {
+      "shipmentId": "s42:ship-007",
+      "commitmentId": "s42:comm-007",
+      "quantity": 1349
+    },
+    {
+      "shipmentId": "s42:ship-008",
+      "commitmentId": "s42:comm-008",
+      "quantity": 1415
+    },
+    {
+      "shipmentId": "s42:ship-009",
+      "commitmentId": "s42:comm-092",
+      "quantity": 2594
+    },
+    {
+      "shipmentId": "s42:ship-010",
+      "commitmentId": "s42:comm-009",
+      "quantity": 220
+    },
+    {
+      "shipmentId": "s42:ship-011",
+      "commitmentId": "s42:comm-052",
+      "quantity": 1464
+    },
+    {
+      "shipmentId": "s42:ship-012",
+      "commitmentId": "s42:comm-010",
+      "quantity": 200
+    },
+    {
+      "shipmentId": "s42:ship-013",
+      "commitmentId": "s42:comm-011",
+      "quantity": 1333
+    },
+    {
+      "shipmentId": "s42:ship-014",
+      "commitmentId": "s42:comm-081",
+      "quantity": 154
+    },
+    {
+      "shipmentId": "s42:ship-015",
+      "commitmentId": "s42:comm-013",
+      "quantity": 263
+    },
+    {
+      "shipmentId": "s42:ship-016",
+      "commitmentId": "s42:comm-014",
+      "quantity": 1496
+    },
+    {
+      "shipmentId": "s42:ship-017",
+      "commitmentId": "s42:comm-017",
+      "quantity": 68
+    },
+    {
+      "shipmentId": "s42:ship-018",
+      "commitmentId": "s42:comm-018",
+      "quantity": 2970
+    },
+    {
+      "shipmentId": "s42:ship-019",
+      "commitmentId": "s42:comm-075",
+      "quantity": 50
+    },
+    {
+      "shipmentId": "s42:ship-020",
+      "commitmentId": "s42:comm-019",
+      "quantity": 163
+    },
+    {
+      "shipmentId": "s42:ship-020",
+      "commitmentId": "s42:comm-038",
+      "quantity": 340
+    },
+    {
+      "shipmentId": "s42:ship-020",
+      "commitmentId": "s42:comm-107",
+      "quantity": 3295
+    },
+    {
+      "shipmentId": "s42:ship-021",
+      "commitmentId": "s42:comm-020",
+      "quantity": 65
+    },
+    {
+      "shipmentId": "s42:ship-021",
+      "commitmentId": "s42:comm-024",
+      "quantity": 249
+    },
+    {
+      "shipmentId": "s42:ship-021",
+      "commitmentId": "s42:comm-044",
+      "quantity": 1176
+    },
+    {
+      "shipmentId": "s42:ship-022",
+      "commitmentId": "s42:comm-056",
+      "quantity": 61
+    },
+    {
+      "shipmentId": "s42:ship-022",
+      "commitmentId": "s42:comm-112",
+      "quantity": 116
+    },
+    {
+      "shipmentId": "s42:ship-023",
+      "commitmentId": "s42:comm-021",
+      "quantity": 52
+    },
+    {
+      "shipmentId": "s42:ship-023",
+      "commitmentId": "s42:comm-034",
+      "quantity": 263
+    },
+    {
+      "shipmentId": "s42:ship-024",
+      "commitmentId": "s42:comm-022",
+      "quantity": 3121
+    },
+    {
+      "shipmentId": "s42:ship-025",
+      "commitmentId": "s42:comm-025",
+      "quantity": 752
+    },
+    {
+      "shipmentId": "s42:ship-025",
+      "commitmentId": "s42:comm-031",
+      "quantity": 204
+    },
+    {
+      "shipmentId": "s42:ship-025",
+      "commitmentId": "s42:comm-032",
+      "quantity": 4208
+    },
+    {
+      "shipmentId": "s42:ship-026",
+      "commitmentId": "s42:comm-026",
+      "quantity": 1116
+    },
+    {
+      "shipmentId": "s42:ship-026",
+      "commitmentId": "s42:comm-036",
+      "quantity": 1436
+    },
+    {
+      "shipmentId": "s42:ship-026",
+      "commitmentId": "s42:comm-088",
+      "quantity": 277
+    },
+    {
+      "shipmentId": "s42:ship-027",
+      "commitmentId": "s42:comm-119",
+      "quantity": 200
+    },
+    {
+      "shipmentId": "s42:ship-028",
+      "commitmentId": "s42:comm-027",
+      "quantity": 4302
+    },
+    {
+      "shipmentId": "s42:ship-029",
+      "commitmentId": "s42:comm-028",
+      "quantity": 753
+    },
+    {
+      "shipmentId": "s42:ship-029",
+      "commitmentId": "s42:comm-037",
+      "quantity": 185
+    },
+    {
+      "shipmentId": "s42:ship-029",
+      "commitmentId": "s42:comm-096",
+      "quantity": 1829
+    },
+    {
+      "shipmentId": "s42:ship-030",
+      "commitmentId": "s42:comm-029",
+      "quantity": 160
+    },
+    {
+      "shipmentId": "s42:ship-030",
+      "commitmentId": "s42:comm-116",
+      "quantity": 837
+    },
+    {
+      "shipmentId": "s42:ship-031",
+      "commitmentId": "s42:comm-030",
+      "quantity": 131
+    },
+    {
+      "shipmentId": "s42:ship-031",
+      "commitmentId": "s42:comm-039",
+      "quantity": 3212
+    },
+    {
+      "shipmentId": "s42:ship-031",
+      "commitmentId": "s42:comm-051",
+      "quantity": 99
+    },
+    {
+      "shipmentId": "s42:ship-032",
+      "commitmentId": "s42:comm-053",
+      "quantity": 162
+    },
+    {
+      "shipmentId": "s42:ship-032",
+      "commitmentId": "s42:comm-065",
+      "quantity": 363
+    },
+    {
+      "shipmentId": "s42:ship-032",
+      "commitmentId": "s42:comm-078",
+      "quantity": 119
+    },
+    {
+      "shipmentId": "s42:ship-033",
+      "commitmentId": "s42:comm-091",
+      "quantity": 168
+    },
+    {
+      "shipmentId": "s42:ship-033",
+      "commitmentId": "s42:comm-110",
+      "quantity": 838
+    },
+    {
+      "shipmentId": "s42:ship-034",
+      "commitmentId": "s42:comm-033",
+      "quantity": 256
+    },
+    {
+      "shipmentId": "s42:ship-034",
+      "commitmentId": "s42:comm-098",
+      "quantity": 2903
+    },
+    {
+      "shipmentId": "s42:ship-035",
+      "commitmentId": "s42:comm-035",
+      "quantity": 637
+    },
+    {
+      "shipmentId": "s42:ship-035",
+      "commitmentId": "s42:comm-066",
+      "quantity": 821
+    },
+    {
+      "shipmentId": "s42:ship-035",
+      "commitmentId": "s42:comm-086",
+      "quantity": 536
+    },
+    {
+      "shipmentId": "s42:ship-036",
+      "commitmentId": "s42:comm-040",
+      "quantity": 346
+    },
+    {
+      "shipmentId": "s42:ship-037",
+      "commitmentId": "s42:comm-042",
+      "quantity": 50
+    },
+    {
+      "shipmentId": "s42:ship-037",
+      "commitmentId": "s42:comm-063",
+      "quantity": 2481
+    },
+    {
+      "shipmentId": "s42:ship-038",
+      "commitmentId": "s42:comm-043",
+      "quantity": 145
+    },
+    {
+      "shipmentId": "s42:ship-038",
+      "commitmentId": "s42:comm-079",
+      "quantity": 2495
+    },
+    {
+      "shipmentId": "s42:ship-038",
+      "commitmentId": "s42:comm-099",
+      "quantity": 579
+    },
+    {
+      "shipmentId": "s42:ship-039",
+      "commitmentId": "s42:comm-046",
+      "quantity": 161
+    },
+    {
+      "shipmentId": "s42:ship-039",
+      "commitmentId": "s42:comm-073",
+      "quantity": 73
+    },
+    {
+      "shipmentId": "s42:ship-040",
+      "commitmentId": "s42:comm-054",
+      "quantity": 1272
+    },
+    {
+      "shipmentId": "s42:ship-040",
+      "commitmentId": "s42:comm-102",
+      "quantity": 302
+    },
+    {
+      "shipmentId": "s42:ship-041",
+      "commitmentId": "s42:comm-055",
+      "quantity": 1580
+    },
+    {
+      "shipmentId": "s42:ship-041",
+      "commitmentId": "s42:comm-077",
+      "quantity": 94
+    },
+    {
+      "shipmentId": "s42:ship-041",
+      "commitmentId": "s42:comm-115",
+      "quantity": 72
+    },
+    {
+      "shipmentId": "s42:ship-042",
+      "commitmentId": "s42:comm-058",
+      "quantity": 143
+    },
+    {
+      "shipmentId": "s42:ship-042",
+      "commitmentId": "s42:comm-108",
+      "quantity": 276
+    },
+    {
+      "shipmentId": "s42:ship-043",
+      "commitmentId": "s42:comm-060",
+      "quantity": 1310
+    },
+    {
+      "shipmentId": "s42:ship-044",
+      "commitmentId": "s42:comm-061",
+      "quantity": 222
+    },
+    {
+      "shipmentId": "s42:ship-044",
+      "commitmentId": "s42:comm-067",
+      "quantity": 756
+    },
+    {
+      "shipmentId": "s42:ship-044",
+      "commitmentId": "s42:comm-082",
+      "quantity": 2796
+    },
+    {
+      "shipmentId": "s42:ship-045",
+      "commitmentId": "s42:comm-062",
+      "quantity": 487
+    },
+    {
+      "shipmentId": "s42:ship-045",
+      "commitmentId": "s42:comm-072",
+      "quantity": 56
+    },
+    {
+      "shipmentId": "s42:ship-046",
+      "commitmentId": "s42:comm-068",
+      "quantity": 1363
+    },
+    {
+      "shipmentId": "s42:ship-046",
+      "commitmentId": "s42:comm-069",
+      "quantity": 2858
+    },
+    {
+      "shipmentId": "s42:ship-046",
+      "commitmentId": "s42:comm-076",
+      "quantity": 669
+    },
+    {
+      "shipmentId": "s42:ship-047",
+      "commitmentId": "s42:comm-071",
+      "quantity": 175
+    },
+    {
+      "shipmentId": "s42:ship-047",
+      "commitmentId": "s42:comm-097",
+      "quantity": 333
+    },
+    {
+      "shipmentId": "s42:ship-048",
+      "commitmentId": "s42:comm-080",
+      "quantity": 78
+    },
+    {
+      "shipmentId": "s42:ship-049",
+      "commitmentId": "s42:comm-083",
+      "quantity": 680
+    },
+    {
+      "shipmentId": "s42:ship-050",
+      "commitmentId": "s42:comm-084",
+      "quantity": 2814
+    },
+    {
+      "shipmentId": "s42:ship-050",
+      "commitmentId": "s42:comm-105",
+      "quantity": 273
+    },
+    {
+      "shipmentId": "s42:ship-050",
+      "commitmentId": "s42:comm-109",
+      "quantity": 1545
+    },
+    {
+      "shipmentId": "s42:ship-051",
+      "commitmentId": "s42:comm-087",
+      "quantity": 3269
+    },
+    {
+      "shipmentId": "s42:ship-051",
+      "commitmentId": "s42:comm-114",
+      "quantity": 1803
+    },
+    {
+      "shipmentId": "s42:ship-052",
+      "commitmentId": "s42:comm-093",
+      "quantity": 2926
+    },
+    {
+      "shipmentId": "s42:ship-052",
+      "commitmentId": "s42:comm-111",
+      "quantity": 644
+    },
+    {
+      "shipmentId": "s42:ship-053",
+      "commitmentId": "s42:comm-101",
+      "quantity": 4428
+    },
+    {
+      "shipmentId": "s42:ship-054",
+      "commitmentId": "s42:comm-106",
+      "quantity": 2604
+    },
+    {
+      "shipmentId": "s42:ship-054",
+      "commitmentId": "s42:comm-118",
+      "quantity": 90
+    },
+    {
+      "shipmentId": "s42:ship-055",
+      "commitmentId": "s42:comm-113",
+      "quantity": 250
+    },
+    {
+      "shipmentId": "s42:ship-056",
+      "commitmentId": "s42:comm-117",
+      "quantity": 279
+    },
+    {
+      "shipmentId": "s42:ship-057",
+      "commitmentId": "s42:comm-074",
+      "quantity": 89
+    },
+    {
+      "shipmentId": "s42:ship-058",
+      "commitmentId": "s42:comm-059",
+      "quantity": 1125
+    },
+    {
+      "shipmentId": "s42:ship-059",
+      "commitmentId": "s42:comm-015",
+      "quantity": 846
+    },
+    {
+      "shipmentId": "s42:ship-060",
+      "commitmentId": "s42:comm-089",
+      "quantity": 1368
+    },
+    {
+      "shipmentId": "s42:ship-061",
+      "commitmentId": "s42:comm-050",
+      "quantity": 2861
+    },
+    {
+      "shipmentId": "s42:ship-062",
+      "commitmentId": "s42:comm-085",
+      "quantity": 590
+    },
+    {
+      "shipmentId": "s42:ship-063",
+      "commitmentId": "s42:comm-023",
+      "quantity": 735
+    },
+    {
+      "shipmentId": "s42:ship-064",
+      "commitmentId": "s42:comm-012",
+      "quantity": 231
+    },
+    {
+      "shipmentId": "s42:ship-065",
+      "commitmentId": "s42:comm-100",
+      "quantity": 4065
+    },
+    {
+      "shipmentId": "s42:ship-066",
+      "commitmentId": "s42:comm-049",
+      "quantity": 208
+    },
+    {
+      "shipmentId": "s42:ship-067",
+      "commitmentId": "s42:comm-045",
+      "quantity": 62
+    },
+    {
+      "shipmentId": "s42:ship-068",
+      "commitmentId": "s42:comm-094",
+      "quantity": 102
+    },
+    {
+      "shipmentId": "s42:ship-069",
+      "commitmentId": "s42:comm-090",
+      "quantity": 54
+    },
+    {
+      "shipmentId": "s42:ship-070",
+      "commitmentId": "s42:comm-120",
+      "quantity": 309
+    },
+    {
+      "shipmentId": "s42:ship-071",
+      "commitmentId": "s42:comm-095",
+      "quantity": 1271
+    },
+    {
+      "shipmentId": "s42:ship-072",
+      "commitmentId": "s42:comm-041",
+      "quantity": 1959
+    },
+    {
+      "shipmentId": "s42:ship-073",
+      "commitmentId": "s42:comm-016",
+      "quantity": 970
+    },
+    {
+      "shipmentId": "s42:ship-074",
+      "commitmentId": "s42:comm-103",
+      "quantity": 1550
+    },
+    {
+      "shipmentId": "s42:ship-075",
+      "commitmentId": "s42:comm-064",
+      "quantity": 469
+    },
+    {
+      "shipmentId": "s42:ship-076",
+      "commitmentId": "s42:comm-048",
+      "quantity": 3869
+    },
+    {
+      "shipmentId": "s42:ship-077",
+      "commitmentId": "s42:comm-104",
+      "quantity": 125
+    },
+    {
+      "shipmentId": "s42:ship-078",
+      "commitmentId": "s42:comm-057",
+      "quantity": 571
+    },
+    {
+      "shipmentId": "s42:ship-079",
+      "commitmentId": "s42:comm-070",
+      "quantity": 694
+    },
+    {
+      "shipmentId": "s42:ship-080",
+      "commitmentId": "s42:comm-047",
+      "quantity": 1439
+    }
+  ],
+  "inventoryPools": [
+    {
+      "id": "s42:inv-001",
+      "scenarioId": "s42",
+      "quantityOnHand": 3652,
+      "safetyStock": 743,
+      "demandUnitsPerHour": 11.75,
+      "storedAtId": "s42:loc-destination-010",
+      "productId": "s42:prod-a",
+      "poolTransferCostPerUnit": 2.89
+    },
+    {
+      "id": "s42:inv-002",
+      "scenarioId": "s42",
+      "quantityOnHand": 7544,
+      "safetyStock": 204,
+      "demandUnitsPerHour": 39.05,
+      "storedAtId": "s42:loc-destination-002",
+      "productId": "s42:prod-c",
+      "poolTransferCostPerUnit": 0.99
+    },
+    {
+      "id": "s42:inv-003",
+      "scenarioId": "s42",
+      "quantityOnHand": 5975,
+      "safetyStock": 591,
+      "demandUnitsPerHour": 34,
+      "storedAtId": "s42:loc-destination-006",
+      "productId": "s42:prod-a",
+      "poolTransferCostPerUnit": 1.48
+    },
+    {
+      "id": "s42:inv-004",
+      "scenarioId": "s42",
+      "quantityOnHand": 7228,
+      "safetyStock": 424,
+      "demandUnitsPerHour": 28.49,
+      "storedAtId": "s42:loc-destination-009",
+      "productId": "s42:prod-d",
+      "poolTransferCostPerUnit": 0.51
+    },
+    {
+      "id": "s42:inv-005",
+      "scenarioId": "s42",
+      "quantityOnHand": 2688,
+      "safetyStock": 748,
+      "demandUnitsPerHour": 43.09,
+      "storedAtId": "s42:loc-destination-001",
+      "productId": "s42:prod-c",
+      "poolTransferCostPerUnit": 2.33
+    },
+    {
+      "id": "s42:inv-006",
+      "scenarioId": "s42",
+      "quantityOnHand": 7450,
+      "safetyStock": 1106,
+      "demandUnitsPerHour": 12.82,
+      "storedAtId": "s42:loc-destination-005",
+      "productId": "s42:prod-a",
+      "poolTransferCostPerUnit": 1.06
+    }
+  ],
+  "capacityPools": [
+    {
+      "id": "s42:cap-001",
+      "scenarioId": "s42",
+      "unitsPerHour": 303,
+      "scope": "location",
+      "constrainedEntityIds": [
+        "s42:loc-hub-001"
+      ]
+    },
+    {
+      "id": "s42:cap-002",
+      "scenarioId": "s42",
+      "unitsPerHour": 277,
+      "scope": "location",
+      "constrainedEntityIds": [
+        "s42:loc-hub-002"
+      ]
+    }
+  ],
+  "produces": [
+    {
+      "locationId": "s42:loc-supplier-002",
+      "productId": "s42:prod-a"
+    },
+    {
+      "locationId": "s42:loc-supplier-003",
+      "productId": "s42:prod-b"
+    },
+    {
+      "locationId": "s42:loc-factory-003",
+      "productId": "s42:prod-c"
+    },
+    {
+      "locationId": "s42:loc-supplier-001",
+      "productId": "s42:prod-d"
+    },
+    {
+      "locationId": "s42:loc-supplier-001",
+      "productId": "s42:prod-a"
+    },
+    {
+      "locationId": "s42:loc-supplier-003",
+      "productId": "s42:prod-c"
+    },
+    {
+      "locationId": "s42:loc-supplier-004",
+      "productId": "s42:prod-a"
+    },
+    {
+      "locationId": "s42:loc-factory-001",
+      "productId": "s42:prod-c"
+    },
+    {
+      "locationId": "s42:loc-factory-002",
+      "productId": "s42:prod-d"
+    },
+    {
+      "locationId": "s42:loc-factory-003",
+      "productId": "s42:prod-a"
+    }
+  ]
+}

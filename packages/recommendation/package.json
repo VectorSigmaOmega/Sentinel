@@ -1,0 +1,11 @@
+{
+  "name": "@sentinel/recommendation",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "@sentinel/impact": "0.1.0",
+    "@sentinel/ontology": "0.1.0",
+    "@sentinel/routing": "0.1.0"
+  }
+}

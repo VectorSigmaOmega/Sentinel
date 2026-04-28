@@ -1,0 +1,27 @@
+{
+  "name": "sentinel",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:api": "tsx apps/api/src/main.ts",
+    "dev:web": "node apps/web/server.mjs",
+    "generate:scenario": "tsx packages/scenario-generator/src/cli.ts",
+    "neo4j:up": "docker compose -f docker/compose.yml up -d neo4j",
+    "neo4j:down": "docker compose -f docker/compose.yml down",
+    "smoke:ingestion": "tsx apps/api/src/smoke-ingestion.ts",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8",
+    "zod": "^3.24.1"
+  }
+}

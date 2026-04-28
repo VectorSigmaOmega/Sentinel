@@ -1,0 +1,10 @@
+{
+  "name": "@sentinel/impact",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "@sentinel/ontology": "0.1.0",
+    "@sentinel/shared": "0.1.0"
+  }
+}

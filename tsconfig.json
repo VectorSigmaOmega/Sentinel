@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "baseUrl": ".",
+    "paths": {
+      "@sentinel/ontology": ["packages/ontology/src/index.ts"],
+      "@sentinel/impact": ["packages/impact/src/index.ts"],
+      "@sentinel/recommendation": ["packages/recommendation/src/index.ts"],
+      "@sentinel/routing": ["packages/routing/src/index.ts"],
+      "@sentinel/scenario-generator": ["packages/scenario-generator/src/index.ts"],
+      "@sentinel/shared": ["packages/shared/src/index.ts"]
+    }
+  },
+  "include": [
+    "packages/**/*.ts",
+    "apps/**/*.ts"
+  ]
+}

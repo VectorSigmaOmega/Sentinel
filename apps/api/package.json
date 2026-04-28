@@ -1,0 +1,17 @@
+{
+  "name": "@sentinel/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@fastify/cors": "^10.0.1",
+    "@sentinel/impact": "0.1.0",
+    "@sentinel/ontology": "0.1.0",
+    "@sentinel/recommendation": "0.1.0",
+    "@sentinel/routing": "0.1.0",
+    "@sentinel/scenario-generator": "0.1.0",
+    "fastify": "^5.2.1",
+    "neo4j-driver": "^5.27.0",
+    "zod": "^3.24.1"
+  }
+}

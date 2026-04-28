@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sentinel</title>
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-surface="sentinel">
+    <div class="shell">
+      <header class="topbar">
+        <div class="brand">
+          <h1>Sentinel</h1>
+          <p id="scenario-name">Loading scenario...</p>
+        </div>
+        <div class="topbar-actions">
+          <div class="surface-tabs" role="tablist" aria-label="Product surface">
+            <button id="surface-sentinel-button" class="surface-tab active" type="button">Sentinel</button>
+            <button id="surface-marauder-button" class="surface-tab" type="button">Marauder</button>
+          </div>
+          <label class="field compact">
+            <span>API</span>
+            <input id="api-base-input" type="text" value="" />
+          </label>
+        </div>
+      </header>
+
+      <main id="workspace-surface" class="workspace">
+        <section class="panel panel-primary">
+          <div class="section-header">
+            <div>
+              <h2 id="surface-title">Command Center</h2>
+              <p id="surface-copy" class="subtle section-copy">Map for spatial intuition. Graph for ontology and causality.</p>
+            </div>
+            <div class="status-line">
+              <span id="scenario-version" class="pill">Version -</span>
+              <span id="scenario-clock" class="pill pill-muted">Time -</span>
+              <span id="api-status" class="pill pill-muted">Connecting</span>
+            </div>
+          </div>
+
+          <div id="incident-banner" class="incident-banner incident-banner-muted">
+            No active disruption detected.
+          </div>
+
+          <div class="view-grid">
+            <section class="canvas-panel">
+              <div class="section-header slim">
+                <h3>Operations Map</h3>
+                <span class="muted">MapLibre operations view</span>
+              </div>
+              <div class="canvas-frame map-frame">
+                <div id="network-map" class="map-canvas" role="img" aria-label="Scenario map"></div>
+              </div>
+            </section>
+
+            <section class="canvas-panel">
+              <div class="section-header slim">
+                <h3>Causality Graph</h3>
+                <span id="graph-focus-label" class="muted">Scroll and drag to inspect the graph</span>
+              </div>
+              <div class="canvas-frame graph-frame">
+                <svg id="causality-graph" viewBox="0 0 1000 640" role="img" aria-label="Causality graph"></svg>
+              </div>
+            </section>
+          </div>
+
+          <div class="section-grid">
+            <div>
+              <div class="section-header slim">
+                <h3>Selected Entity</h3>
+              </div>
+              <div id="entity-panel" class="detail-list empty-state">Select a node from the map or graph.</div>
+            </div>
+            <div>
+              <div class="section-header slim">
+                <h3>Impact Summary</h3>
+              </div>
+              <div id="impact-panel" class="detail-list empty-state">Run an impact preview.</div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="sidebar">
+          <section class="panel mode-panel mode-sentinel">
+            <div class="section-header slim">
+              <h2>Active Disruptions</h2>
+              <span id="disruption-feed-meta" class="muted">No events</span>
+            </div>
+            <div id="disruption-feed" class="stack empty-state">Waiting for events.</div>
+            <div class="button-row panel-actions">
+              <button id="run-recommendations-button" type="button" class="button">Recommend</button>
+            </div>
+            <form class="form-grid recommendation-controls">
+              <label class="field">
+                <span>Objective</span>
+                <select id="objective-preset"></select>
+              </label>
+            </form>
+          </section>
+
+          <section class="panel mode-panel mode-sentinel">
+            <div class="section-header slim">
+              <h2>Recommendations</h2>
+              <span id="recommendation-meta" class="muted">No run yet</span>
+            </div>
+            <div id="recommendation-preview" class="detail-list empty-state">Preview a recommendation before applying it.</div>
+            <div id="recommendation-panel" class="stack empty-state">Run a recommendation pass.</div>
+          </section>
+
+          <section class="panel mode-panel mode-sentinel">
+            <div class="section-header slim">
+              <h2>Neo4j</h2>
+              <span id="neo4j-status" class="muted">Not checked</span>
+            </div>
+            <div class="button-row">
+              <button id="neo4j-ingest-button" type="button" class="button button-secondary">Ingest</button>
+              <button id="neo4j-counts-button" type="button" class="button button-secondary">Counts</button>
+              <button id="neo4j-reset-button" type="button" class="button button-warning">Reset DB</button>
+            </div>
+            <div id="neo4j-panel" class="detail-list empty-state">Database counts will appear here.</div>
+          </section>
+
+          <section class="panel mode-panel mode-marauder">
+            <div class="section-header slim">
+              <h2>Marauder Events</h2>
+              <span id="marauder-status" class="muted">Ready</span>
+            </div>
+            <div id="marauder-events" class="marauder-grid"></div>
+            <div id="draft-event-panel" class="detail-list empty-state">Preview an event before injecting it.</div>
+            <div class="button-row panel-actions">
+              <button id="inject-previewed-event-button" type="button" class="button button-danger">Inject Previewed Event</button>
+              <button id="clear-draft-event-button" type="button" class="button button-secondary">Clear Preview</button>
+            </div>
+          </section>
+
+          <section class="panel mode-panel mode-marauder">
+            <div class="section-header">
+              <div>
+                <h2>Scenario Builder</h2>
+                <p class="subtle section-copy">Inject events, inspect graph effects, reset the demo scenario.</p>
+              </div>
+            </div>
+            <div class="section-header slim">
+              <h3>Custom Event</h3>
+              <span class="muted">Writes into the shared disruption feed</span>
+            </div>
+            <form id="disruption-form" class="form-grid">
+              <label class="field">
+                <span>Type</span>
+                <select id="disruption-type"></select>
+              </label>
+              <label class="field">
+                <span>Target</span>
+                <select id="disruption-target"></select>
+              </label>
+              <label class="field">
+                <span>Duration (h)</span>
+                <input id="disruption-duration" type="number" min="1" step="1" value="336" />
+              </label>
+              <label class="field">
+                <span>Severity</span>
+                <input id="disruption-severity" type="number" min="0" max="1" step="0.05" value="1" />
+              </label>
+              <div class="button-row">
+                <button id="preview-custom-event-button" type="button" class="button button-secondary">Preview Event</button>
+                <button id="inject-custom-event-button" type="button" class="button button-danger">Inject Draft</button>
+              </div>
+              <div class="button-row">
+                <button id="advance-time-button" type="button" class="button button-secondary">Advance 24h</button>
+                <button id="reset-scenario-button" type="button" class="button button-warning">Reset Scenario</button>
+              </div>
+            </form>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <template id="metric-template">
+      <article class="metric">
+        <span class="metric-label"></span>
+        <strong class="metric-value"></strong>
+      </article>
+    </template>
+
+    <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
