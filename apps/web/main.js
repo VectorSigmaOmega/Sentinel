@@ -1332,6 +1332,100 @@ function buildLaneInfo() {
     .filter((lane) => lane.originId && lane.destinationId);
 }
 
+function buildShipmentRouteUsage(laneInfo) {
+  const impactByShipmentId = new Map((state.impactRun?.shipmentObservations ?? []).map((observation) => [observation.shipmentId, observation]));
+  const { blockedLaneIds, delayedLaneIds } = computeVisibleLaneState(laneInfo);
+  const usage = new Map();
+
+  for (const node of state.graph.nodes) {
+    if (node.label !== "Shipment") continue;
+    const status = String(node.properties.status ?? "");
+    if (status === "delivered" || status === "failed" || status === "cancelled") continue;
+
+    const laneSequence = Array.isArray(node.properties.laneSequence) ? node.properties.laneSequence : [];
+    if (laneSequence.length === 0) continue;
+
+    const currentLaneIndex = Math.max(0, Number(node.properties.currentLaneIndex ?? 0));
+    const currentLaneId = laneSequence[Math.min(currentLaneIndex, laneSequence.length - 1)] ?? null;
+    const quantity = Number(node.properties.quantity ?? 0);
+    const observation = impactByShipmentId.get(node.id);
+    const shipmentDelayed = (observation?.etaDeltaHours ?? 0) > 0;
+    const blockedIndex = laneSequence.findIndex((laneId) => blockedLaneIds.has(laneId));
+
+    for (const [index, laneId] of laneSequence.entries()) {
+      const entry = usage.get(laneId) ?? {
+        shipmentCount: 0,
+        currentShipmentCount: 0,
+        delayedShipmentCount: 0,
+        blockedShipmentCount: 0,
+        totalQuantity: 0,
+      };
+
+      const isBlockedLane = blockedLaneIds.has(laneId);
+      const isAfterBlockedPoint = blockedIndex >= 0 && index > blockedIndex;
+      const countsAsActiveFlow = !isBlockedLane && !isAfterBlockedPoint;
+
+      if (countsAsActiveFlow) {
+        entry.shipmentCount += 1;
+        entry.totalQuantity += quantity;
+        if (laneId === currentLaneId) {
+          entry.currentShipmentCount += 1;
+        }
+      }
+      if (isBlockedLane) {
+        entry.blockedShipmentCount += 1;
+      }
+      if ((delayedLaneIds.has(laneId) || (shipmentDelayed && blockedIndex < 0 && laneId === currentLaneId)) && countsAsActiveFlow) {
+        entry.delayedShipmentCount += 1;
+      }
+      usage.set(laneId, entry);
+    }
+  }
+
+  return usage;
+}
+
+function computeVisibleLaneState(laneInfo) {
+  const laneById = new Map(laneInfo.map((lane) => [lane.id, lane]));
+  const blockedLaneIds = new Set();
+  const delayedLaneIds = new Set();
+
+  for (const disruption of getVisibleDisruptions()) {
+    if (disruption.type === "lane_closure" && disruption.targetKind === "Lane") {
+      blockedLaneIds.add(disruption.targetId);
+      continue;
+    }
+    if (disruption.type === "node_closure" && disruption.targetKind === "Location") {
+      for (const lane of laneInfo) {
+        if (lane.originId === disruption.targetId || lane.destinationId === disruption.targetId) {
+          blockedLaneIds.add(lane.id);
+        }
+      }
+      continue;
+    }
+    if ((disruption.type === "add_delay" || disruption.type === "reliability_drop") && disruption.targetKind === "Lane") {
+      delayedLaneIds.add(disruption.targetId);
+      continue;
+    }
+    if (disruption.type === "capacity_reduction" && disruption.targetKind === "Location") {
+      for (const lane of laneInfo) {
+        if (lane.originId === disruption.targetId || lane.destinationId === disruption.targetId) {
+          delayedLaneIds.add(lane.id);
+        }
+      }
+    }
+  }
+
+  for (const laneId of blockedLaneIds) {
+    delayedLaneIds.delete(laneId);
+    if (!laneById.has(laneId)) {
+      blockedLaneIds.delete(laneId);
+    }
+  }
+
+  return { blockedLaneIds, delayedLaneIds };
+}
+
 function buildNeighborhood(focusId) {
   const nodesById = new Map(state.graph.nodes.map((node) => [node.id, node]));
   const incomingEdges = state.graph.edges.filter((edge) => edge.target === focusId);
@@ -1410,33 +1504,64 @@ function addMapLayers(map) {
   map.addSource("sentinel-incidents", { type: "geojson", data: emptyGeoJson() });
 
   map.addLayer({
-    id: "lanes-base",
+    id: "lanes-topology",
     type: "line",
     source: "sentinel-lanes",
     paint: {
       "line-color": [
         "match",
         ["get", "mode"],
-        "truck", "#2d8ef0",
-        "rail", "#62b7ff",
-        "ocean", "#1fbe7c",
-        "air", "#d79a41",
-        "#577185",
+        "truck", "#7ca4d8",
+        "rail", "#8fb6df",
+        "ocean", "#84b9a8",
+        "air", "#d1b17a",
+        "#97a8bc",
       ],
-      "line-width": 2,
-      "line-opacity": 0.55,
+      "line-width": 1.5,
+      "line-opacity": 0.22,
     },
   });
 
   map.addLayer({
-    id: "lanes-affected",
+    id: "lanes-active",
     type: "line",
     source: "sentinel-lanes",
-    filter: ["==", ["get", "affected"], 1],
+    filter: [">", ["get", "flowCount"], 0],
     paint: {
-      "line-color": "#7fd3ff",
-      "line-width": 4,
-      "line-opacity": 0.8,
+      "line-color": [
+        "case",
+        ["==", ["get", "disrupted"], 1], "#df9ca7",
+        [">", ["get", "delayedFlowCount"], 0], "#e2c1a4",
+        ["match",
+          ["get", "mode"],
+          "truck", "#3178f6",
+          "rail", "#57a0f5",
+          "ocean", "#1f9d62",
+          "air", "#c78214",
+          "#5f7387",
+        ],
+      ],
+      "line-width": [
+        "interpolate",
+        ["linear"],
+        ["get", "flowCount"],
+        1, 3,
+        3, 5,
+        6, 7.5,
+        10, 9,
+      ],
+      "line-opacity": [
+        "case",
+        ["==", ["get", "disrupted"], 1], 0.42,
+        [">", ["get", "delayedFlowCount"], 0], 0.58,
+        ["interpolate",
+          ["linear"],
+          ["get", "flowCount"],
+          1, 0.72,
+          4, 0.86,
+          8, 0.96,
+        ],
+      ],
     },
   });
 
@@ -1446,9 +1571,21 @@ function addMapLayers(map) {
     source: "sentinel-lanes",
     filter: ["==", ["get", "disrupted"], 1],
     paint: {
-      "line-color": "#ef6b6b",
-      "line-width": 5,
-      "line-opacity": 0.95,
+      "line-color": "#e8b1b8",
+      "line-width": [
+        "max",
+        4,
+        [
+          "interpolate",
+          ["linear"],
+          ["get", "flowCount"],
+          1, 3,
+          3, 4.5,
+          6, 5.5,
+          10, 6.5,
+        ],
+      ],
+      "line-opacity": 0.68,
     },
   });
 
@@ -1459,7 +1596,7 @@ function addMapLayers(map) {
     filter: ["==", ["get", "preview"], 1],
     paint: {
       "line-color": "#ffe08a",
-      "line-width": 6,
+      "line-width": 6.5,
       "line-opacity": 0.95,
     },
   });
@@ -1473,7 +1610,7 @@ function addMapLayers(map) {
       "circle-color": [
         "case",
         ["==", ["get", "disrupted"], 1],
-        "#ef6b6b",
+        "#cf2f46",
         "#5db6ff",
       ],
       "circle-radius": [
@@ -1512,15 +1649,15 @@ function addMapLayers(map) {
       "circle-stroke-color": [
         "case",
         ["==", ["get", "preview"], 1], "#fff1c2",
-        ["==", ["get", "selected"], 1], "#ffffff",
-        ["==", ["get", "disrupted"], 1], "#ffd5d5",
-        "rgba(255,255,255,0.35)",
+        ["==", ["get", "selected"], 1], "#173864",
+        ["==", ["get", "disrupted"], 1], "#cf2f46",
+        "rgba(23,33,46,0.24)",
       ],
       "circle-stroke-width": [
         "case",
         ["==", ["get", "preview"], 1], 2.6,
         ["==", ["get", "selected"], 1], 2.5,
-        ["==", ["get", "disrupted"], 1], 2.2,
+        ["==", ["get", "disrupted"], 1], 2.8,
         1.1,
       ],
     },
@@ -1538,8 +1675,8 @@ function addMapLayers(map) {
       "text-font": ["Open Sans Semibold"],
     },
     paint: {
-      "text-color": "#eef4fb",
-      "text-halo-color": "rgba(17, 28, 39, 0.88)",
+      "text-color": "#23374e",
+      "text-halo-color": "rgba(255, 255, 255, 0.9)",
       "text-halo-width": 1,
     },
   });
@@ -1550,8 +1687,8 @@ function addMapLayers(map) {
     source: "sentinel-incidents",
     paint: {
       "circle-radius": 20,
-      "circle-color": "rgba(239, 107, 107, 0.08)",
-      "circle-stroke-color": "#ef6b6b",
+      "circle-color": "rgba(207, 47, 70, 0.12)",
+      "circle-stroke-color": "#cf2f46",
       "circle-stroke-width": 2,
     },
   });
@@ -1567,15 +1704,15 @@ function addMapLayers(map) {
       "text-font": ["Open Sans Bold"],
     },
     paint: {
-      "text-color": "#ffd5d5",
-      "text-halo-color": "rgba(17, 28, 39, 0.9)",
+      "text-color": "#971f33",
+      "text-halo-color": "rgba(255, 255, 255, 0.92)",
       "text-halo-width": 1,
     },
   });
 }
 
 function attachMapInteractions(map) {
-  for (const layerId of ["nodes-base", "lanes-base", "lanes-affected", "lanes-disrupted", "lanes-preview"]) {
+  for (const layerId of ["nodes-base", "lanes-topology", "lanes-active", "lanes-disrupted", "lanes-preview"]) {
     map.on("mouseenter", layerId, () => {
       map.getCanvas().style.cursor = "pointer";
     });
@@ -1591,7 +1728,7 @@ function attachMapInteractions(map) {
     }
   });
 
-  for (const layerId of ["lanes-base", "lanes-affected", "lanes-disrupted", "lanes-preview"]) {
+  for (const layerId of ["lanes-topology", "lanes-active", "lanes-disrupted", "lanes-preview"]) {
     map.on("click", layerId, (event) => {
       const id = event.features?.[0]?.properties?.id;
       if (id) {
@@ -1602,7 +1739,7 @@ function attachMapInteractions(map) {
 
   map.on("click", (event) => {
     const features = map.queryRenderedFeatures(event.point, {
-      layers: ["nodes-base", "lanes-base", "lanes-affected", "lanes-disrupted", "lanes-preview"],
+      layers: ["nodes-base", "lanes-topology", "lanes-active", "lanes-disrupted", "lanes-preview"],
     });
     if (features.length === 0) {
       clearSelectedEntity();
@@ -1613,11 +1750,12 @@ function attachMapInteractions(map) {
 function buildMapCollections() {
   const locationNodes = state.graph.nodes.filter((node) => node.label === "Location");
   const laneInfo = buildLaneInfo();
+  const routeUsage = buildShipmentRouteUsage(laneInfo);
   const geoPoints = projectLocationsToMap(locationNodes);
   const affectedSet = new Set(getVisibleImpact()?.affectedEntityIds ?? []);
   const disruptions = getVisibleDisruptions();
   const disruptedLocationIds = new Set(disruptions.filter((item) => item.targetKind === "Location").map((item) => item.targetId));
-  const disruptedLaneIds = new Set(disruptions.filter((item) => item.targetKind === "Lane").map((item) => item.targetId));
+  const { blockedLaneIds, delayedLaneIds } = computeVisibleLaneState(laneInfo);
   const previewLaneIds = getPreviewLaneIds();
   const previewNodeIds = getPreviewNodeIds(laneInfo);
 
@@ -1656,8 +1794,14 @@ function buildMapCollections() {
           properties: {
             id: lane.id,
             mode: lane.mode,
+            flowCount: routeUsage.get(lane.id)?.shipmentCount ?? 0,
+            currentFlowCount: routeUsage.get(lane.id)?.currentShipmentCount ?? 0,
+            delayedFlowCount: routeUsage.get(lane.id)?.delayedShipmentCount ?? 0,
+            blockedFlowCount: routeUsage.get(lane.id)?.blockedShipmentCount ?? 0,
+            totalQuantity: routeUsage.get(lane.id)?.totalQuantity ?? 0,
             affected: affectedSet.has(lane.id) ? 1 : 0,
-            disrupted: disruptedLaneIds.has(lane.id) ? 1 : 0,
+            disrupted: blockedLaneIds.has(lane.id) ? 1 : 0,
+            delayed: delayedLaneIds.has(lane.id) ? 1 : 0,
             preview: previewLaneIds.has(lane.id) ? 1 : 0,
           },
           geometry: { type: "LineString", coordinates: [start, end] },
