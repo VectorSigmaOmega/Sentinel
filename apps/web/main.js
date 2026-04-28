@@ -151,7 +151,6 @@ const dom = {
   apiStatus: document.querySelector("#api-status"),
   scenarioName: document.querySelector("#scenario-name"),
   scenarioVersion: document.querySelector("#scenario-version"),
-  scenarioClock: document.querySelector("#scenario-clock"),
   surfaceTitle: document.querySelector("#surface-title"),
   surfaceCopy: document.querySelector("#surface-copy"),
   incidentBanner: document.querySelector("#incident-banner"),
@@ -179,7 +178,6 @@ const dom = {
   injectCustomEventButton: document.querySelector("#inject-custom-event-button"),
   injectPreviewedEventButton: document.querySelector("#inject-previewed-event-button"),
   clearDraftEventButton: document.querySelector("#clear-draft-event-button"),
-  advanceTimeButton: document.querySelector("#advance-time-button"),
   marauderEvents: document.querySelector("#marauder-events"),
   marauderStatus: document.querySelector("#marauder-status"),
   neo4jIngestButton: document.querySelector("#neo4j-ingest-button"),
@@ -223,7 +221,6 @@ function bindEvents() {
   dom.injectCustomEventButton.addEventListener("click", () => injectCustomEvent());
   dom.injectPreviewedEventButton.addEventListener("click", () => injectPreviewedEvent());
   dom.clearDraftEventButton.addEventListener("click", clearDraftPreview);
-  dom.advanceTimeButton.addEventListener("click", () => advanceScenarioTime(24));
   dom.causalityGraph.addEventListener("wheel", onGraphWheel, { passive: false });
   dom.causalityGraph.addEventListener("pointerdown", onGraphPointerDown);
   dom.causalityGraph.addEventListener("pointermove", onGraphPointerMove);
@@ -394,7 +391,6 @@ function renderHeader() {
   const meta = state.scenarioMeta;
   dom.scenarioName.textContent = summary ? `${summary.name} • seed ${summary.seed}` : "No scenario";
   dom.scenarioVersion.textContent = meta ? `Version ${meta.version}` : "Version -";
-  dom.scenarioClock.textContent = state.now !== null ? `Scenario time ${formatTimestamp(state.now)} UTC` : "Scenario time -";
   if (state.activeSurface === "marauder") {
     dom.surfaceTitle.textContent = "Scenario Builder";
     dom.surfaceCopy.textContent = "Build adversarial events on the live map and graph, then reset the scenario when needed.";
@@ -1086,29 +1082,6 @@ function clearDraftPreview(options = {}) {
   renderCausalityGraph();
   renderImpactPanel();
   renderMarauderEvents();
-}
-
-async function advanceScenarioTime(hours) {
-  if (!state.scenarioId || state.now === null) return;
-  await guarded(async () => {
-    const next = await request(`/api/scenarios/${state.scenarioId}/time`, {
-      method: "POST",
-      body: JSON.stringify({ now: state.now + hours * 3_600_000 }),
-    });
-    state.now = next.now;
-    state.recommendationRun = null;
-    state.recommendationPreview = null;
-    await loadScenarioResources();
-    if (state.draftDisruption) {
-      await previewDraftDisruption(
-        { ...state.draftDisruption, startsAt: Math.max(state.draftDisruption.startsAt, state.now) },
-        state.draftDisruptionLabel,
-      );
-    } else if (getScopedDisruptions().length > 0) {
-      await runImpact();
-    }
-    dom.marauderStatus.textContent = `Time advanced to ${formatTimestamp(state.now)}`;
-  });
 }
 
 async function resolveDisruption(disruptionId) {
@@ -2337,7 +2310,6 @@ function setBusy(nextBusy) {
     dom.injectCustomEventButton,
     dom.injectPreviewedEventButton,
     dom.clearDraftEventButton,
-    dom.advanceTimeButton,
     dom.neo4jIngestButton,
     dom.neo4jCountsButton,
     dom.neo4jResetButton,
