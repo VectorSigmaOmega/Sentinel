@@ -174,7 +174,6 @@ const dom = {
   disruptionDuration: document.querySelector("#disruption-duration"),
   disruptionSeverity: document.querySelector("#disruption-severity"),
   objectivePreset: document.querySelector("#objective-preset"),
-  includeImpactRuns: document.querySelector("#include-impact-runs"),
   previewCustomEventButton: document.querySelector("#preview-custom-event-button"),
   runRecommendationsButton: document.querySelector("#run-recommendations-button"),
   injectCustomEventButton: document.querySelector("#inject-custom-event-button"),
@@ -186,8 +185,6 @@ const dom = {
   neo4jIngestButton: document.querySelector("#neo4j-ingest-button"),
   neo4jCountsButton: document.querySelector("#neo4j-counts-button"),
   neo4jResetButton: document.querySelector("#neo4j-reset-button"),
-  resetScenarioButton: document.querySelector("#reset-scenario-button"),
-  metricTemplate: document.querySelector("#metric-template"),
 };
 
 boot().catch((error) => {
@@ -382,6 +379,7 @@ function renderAll() {
   renderMap();
   renderCausalityGraph();
   renderDisruptionFeed();
+  renderRecommendationControls();
   renderEntityPanel();
   renderImpactPanel();
   renderRecommendationPreview();
@@ -396,7 +394,7 @@ function renderHeader() {
   const meta = state.scenarioMeta;
   dom.scenarioName.textContent = summary ? `${summary.name} • seed ${summary.seed}` : "No scenario";
   dom.scenarioVersion.textContent = meta ? `Version ${meta.version}` : "Version -";
-  dom.scenarioClock.textContent = state.now !== null ? `Time ${formatTimestamp(state.now)}` : "Time -";
+  dom.scenarioClock.textContent = state.now !== null ? `Scenario time ${formatTimestamp(state.now)} UTC` : "Scenario time -";
   if (state.activeSurface === "marauder") {
     dom.surfaceTitle.textContent = "Scenario Builder";
     dom.surfaceCopy.textContent = "Build adversarial events on the live map and graph, then reset the scenario when needed.";
@@ -444,8 +442,10 @@ function renderIncidentBanner() {
 function renderDisruptionFeed() {
   const ongoing = getOngoingDisruptions();
   const scopedIds = new Set(getScopedDisruptionIds());
+  const activeCount = ongoing.filter((item) => item.status === "active").length;
+  const mitigatedCount = ongoing.filter((item) => item.status === "mitigated").length;
   dom.disruptionFeedMeta.textContent = ongoing.length
-    ? `${ongoing.length} ongoing • ${scopedIds.size || ongoing.length} in scope`
+    ? `${activeCount} active${mitigatedCount ? ` • ${mitigatedCount} mitigated` : ""}`
     : "No ongoing events";
 
   if (!ongoing.length) {
@@ -457,18 +457,25 @@ function renderDisruptionFeed() {
   dom.disruptionFeed.className = "stack";
   dom.disruptionFeed.replaceChildren(
     ...ongoing.slice(0, 6).map((disruption) => {
+      const isActionable = disruption.status === "active";
       const card = document.createElement("article");
-      card.className = `item feed-card${scopedIds.has(disruption.id) ? " selected" : ""}`;
-      card.tabIndex = 0;
-      card.addEventListener("click", () => toggleDisruptionSelection(disruption.id));
+      card.className = `item feed-card${scopedIds.has(disruption.id) ? " selected" : ""}${isActionable ? "" : " is-mitigated"}`;
+      card.tabIndex = isActionable ? 0 : -1;
+      card.setAttribute("aria-disabled", String(!isActionable));
+      if (isActionable) {
+        card.addEventListener("click", () => toggleDisruptionSelection(disruption.id));
+      }
 
       const title = document.createElement("button");
       title.className = "feed-title";
       title.type = "button";
-      title.addEventListener("click", (event) => {
-        event.stopPropagation();
-        toggleDisruptionSelection(disruption.id);
-      });
+      title.disabled = !isActionable;
+      if (isActionable) {
+        title.addEventListener("click", (event) => {
+          event.stopPropagation();
+          toggleDisruptionSelection(disruption.id);
+        });
+      }
       const target = displayName(getNodeById(disruption.targetId)) || disruption.targetId;
       title.innerHTML = `
         <span>${escapeHtml(DISRUPTION_CONFIG[disruption.type].label)}</span>
@@ -489,6 +496,14 @@ function renderDisruptionFeed() {
       return card;
     }),
   );
+}
+
+function renderRecommendationControls() {
+  const actionableCount = getActionableScopedDisruptions().length;
+  dom.runRecommendationsButton.disabled = state.busy || actionableCount === 0;
+  dom.runRecommendationsButton.title = actionableCount === 0
+    ? "No active disruption requires a new recommendation"
+    : "";
 }
 
 function renderMarauderEvents() {
@@ -782,9 +797,16 @@ function renderImpactPanel() {
 
 function renderRecommendations() {
   if (!state.recommendationRun) {
-    dom.recommendationMeta.textContent = "No run yet";
+    const actionableCount = getActionableScopedDisruptions().length;
+    dom.recommendationMeta.textContent = actionableCount === 0 ? "No active action needed" : "No run yet";
     dom.recommendationPanel.className = "stack empty-state";
-    dom.recommendationPanel.replaceChildren(renderMessage("Select an active disruption and run Recommend."));
+    dom.recommendationPanel.replaceChildren(
+      renderMessage(
+        actionableCount === 0
+          ? "Mitigated incidents remain in scope until they end, but they do not request new actions."
+          : "Select an active disruption and run Recommend.",
+      ),
+    );
     return;
   }
 
@@ -895,6 +917,7 @@ async function runImpact() {
 
 async function runRecommendations() {
   if (!state.scenarioId) return;
+  if (getActionableScopedDisruptions().length === 0) return;
   await guarded(async () => {
     const disruptions = requireScopedDisruptions();
     const payload = {
@@ -1109,7 +1132,7 @@ async function resolveDisruption(disruptionId) {
 
 function toggleDisruptionSelection(disruptionId) {
   const disruption = state.disruptions.find((item) => item.id === disruptionId);
-  if (!disruption || !isDisruptionOngoing(disruption)) return;
+  if (!disruption || !isDisruptionOngoing(disruption) || disruption.status !== "active") return;
   const selectedIds = new Set(getScopedDisruptionIds());
   if (selectedIds.has(disruptionId)) {
     selectedIds.delete(disruptionId);
@@ -1259,6 +1282,10 @@ function getScopedDisruptionIds() {
 function getScopedDisruptions() {
   const scopedIds = new Set(getScopedDisruptionIds());
   return getOngoingDisruptions().filter((item) => scopedIds.has(item.id));
+}
+
+function getActionableScopedDisruptions() {
+  return getScopedDisruptions().filter((item) => item.status === "active");
 }
 
 function syncSelectedDisruptionIds() {
@@ -2175,11 +2202,30 @@ function setBusy(nextBusy) {
       element.disabled = nextBusy;
     }
   }
+  renderRecommendationControls();
 }
 
 function setApiStatus(text, isError) {
-  dom.apiStatus.textContent = text;
-  dom.apiStatus.className = isError ? "pill pill-danger" : "pill pill-muted";
+  if (isError) {
+    dom.apiStatus.textContent = text;
+    dom.apiStatus.className = "status-dot pill-danger";
+    dom.apiStatus.title = text;
+    dom.apiStatus.setAttribute("aria-label", text);
+    return;
+  }
+
+  if (text === "Connecting") {
+    dom.apiStatus.textContent = text;
+    dom.apiStatus.className = "status-dot pill-muted";
+    dom.apiStatus.title = text;
+    dom.apiStatus.setAttribute("aria-label", text);
+    return;
+  }
+
+  dom.apiStatus.textContent = "";
+  dom.apiStatus.className = "status-dot status-dot-quiet pill-muted";
+  dom.apiStatus.title = "Connected";
+  dom.apiStatus.setAttribute("aria-label", "Connected");
 }
 
 function createSvg(tag) {
